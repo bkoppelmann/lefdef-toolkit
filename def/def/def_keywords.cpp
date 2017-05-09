@@ -694,7 +694,7 @@ defrData::sublex(YYSTYPE *pYylval)
          return K_BY; /* even in dumb mode, we must see the BY deftoken */
       }
       if (do_is_keyword  && ((strcmp(deftoken,"DO") == 0) ||
-          (strcmp(deftoken, "by") == 0))) {
+          (strcmp(deftoken, "do") == 0))) {
          return K_DO; /* even in dumb mode, we must see the DO deftoken */
       }
       if (new_is_keyword  && ((strcmp(deftoken,"NEW") == 0) ||
@@ -724,7 +724,7 @@ defrData::sublex(YYSTYPE *pYylval)
          return K_COVER; /* even in dumb mode, we must see the COVER deftoken */
       }
       if (routed_is_keyword  && ((strcmp(deftoken,"ROUTED") == 0) ||
-          (strcmp(deftoken, "rounted") == 0))) {
+          (strcmp(deftoken, "routed") == 0))) {
          return K_ROUTED; /* even in dumb mode, we must see the */
                           /* ROUTED deftoken */
       }
