@@ -21,8 +21,8 @@
 // check www.openeda.org for details.
 // 
 //  $Author: dell $
-//  $Revision: #11 $
-//  $Date: 2017/02/27 $
+//  $Revision: #1 $
+//  $Date: 2017/06/06 $
 //  $State:  $
 // *****************************************************************************
 // *****************************************************************************
@@ -200,13 +200,10 @@ lefrSetLimitPerMsg(int  msgId,
                    int  numMsg)
 {
     LEF_INIT;
-    char msgStr[10];
-    if ((msgId <= 0) || (msgId >= NOLEFMSG)) {
-        sprintf(msgStr, "%d", msgId);
-        lefError(204, msgStr);
-        return;
+    
+    if ((msgId > 0) && (msgId < NOLEFMSG)) {
+        lefSettings->MsgLimit[msgId] = numMsg;
     }
-    lefSettings->MsgLimit[msgId] = numMsg;
 }
 
 // *****************************************************************************

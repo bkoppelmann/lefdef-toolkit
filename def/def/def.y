@@ -1,6 +1,6 @@
 //******************************************************************************
 //******************************************************************************
-// Copyright 2013-2015, Cadence Design Systems
+// Copyright 2013-2017, Cadence Design Systems
 // 
 // This  file  is  part  of  the  Cadence  LEF/DEF  Open   Source
 // Distribution,  Product Version 5.8. 
@@ -22,8 +22,8 @@
 //******************************************************************************
 // 
 //  $Author: icftcm $
-//  $Revision: #15 $
-//  $Date: 2016/10/13 $
+//  $Revision: #2 $
+//  $Date: 2017/06/07 $
 //  $State:  $
 //****************************************************************************
 
@@ -818,9 +818,10 @@ pin_option: '+' K_SPECIAL
         | placement_status pt orient
           {
             if (defData->callbacks->PinCbk || defData->callbacks->PinExtCbk) {
-              if (defData->hasPort)
+              if (defData->hasPort) {
                  defData->Pin.setPortPlacement($1, $2.x, $2.y, $3);
-              else
+                 defData->hasPort = 0;
+              } else
                  defData->Pin.setPlacement($1, $2.x, $2.y, $3);
             }
           }

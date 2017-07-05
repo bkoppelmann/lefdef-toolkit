@@ -100,7 +100,7 @@ lefrSettings::lefrSettings()
     const char *polyroutingLayers[] = {"ROUTING", ""};
     const char *mimcapLayers[] = {"ROUTING", "CUT", ""};    
     const char *tsvLayers[] = {"CUT", ""};
-    const char *trimpolyLayers[] = {"MASTERSLICE", ""};
+    const char *mastersliceOnly[] = {"MASTERSLICE", ""};
     const char *wellLayers[] = {"MASTERSLICE", "OVERLAP", ""};
 
     // Register LEF58 types and allowed layer types pairs.
@@ -108,13 +108,14 @@ lefrSettings::lefrSettings()
     addLef58Type("MIMCAP", mimcapLayers);
     addLef58Type("TSV", tsvLayers);
     addLef58Type("PASSIVATION", tsvLayers);
-    addLef58Type("TRIMPOLY", trimpolyLayers);
+    addLef58Type("TRIMPOLY", mastersliceOnly);
     addLef58Type("NWELL", wellLayers);
     addLef58Type("PWELL", wellLayers);
     addLef58Type("BELOWDIEEDGE", wellLayers);
     addLef58Type("ABOVEDIEEDGE", wellLayers);
     addLef58Type("DIFFUSION", wellLayers);
     addLef58Type("TRIMMETAL", wellLayers);
+    addLef58Type("MEOL", mastersliceOnly);
 }
 
 

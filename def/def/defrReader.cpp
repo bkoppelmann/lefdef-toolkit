@@ -1,6 +1,6 @@
 // *****************************************************************************
 // *****************************************************************************
-// Copyright 2013 - 2016, Cadence Design Systems
+// Copyright 2013 - 2017, Cadence Design Systems
 // 
 // This  file  is  part  of  the  Cadence  LEF/DEF  Open   Source
 // Distribution,  Product Version 5.8. 
@@ -21,8 +21,8 @@
 // check www.openeda.org for details.
 // 
 //  $Author: icftcm $
-//  $Revision: #12 $
-//  $Date: 2016/12/04 $
+//  $Revision: #2 $
+//  $Date: 2017/06/07 $
 //  $State:  $
 // *****************************************************************************
 // *****************************************************************************
