@@ -1,6 +1,6 @@
 // *****************************************************************************
 // *****************************************************************************
-// Copyright 2012 - 2016, Cadence Design Systems
+// Copyright 2012 - 2017, Cadence Design Systems
 // 
 // This  file  is  part  of  the  Cadence  LEF/DEF  Open   Source
 // Distribution,  Product Version 5.8. 
@@ -3004,6 +3004,7 @@ int main(int argc, char** argv) {
   //defrSetWarningLogFunction(myWarningLogFunction);
 
   if (isSessionless) {
+      defrInitSession(0);
 	  defrSetLongLineNumberFunction(lineNumberCB);
 	  defrSetDeltaNumberLines(line_num_print_interval);
   }

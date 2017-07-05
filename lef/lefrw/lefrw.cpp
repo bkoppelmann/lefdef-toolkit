@@ -2229,6 +2229,7 @@ main(int argc, char** argv) {
   int test2 = 0;
   int ccr749853 = 0;
   int ccr1688946 = 0;
+  int ccr1709089 = 0;
   int verbose = 0;
 
 // start_mem = (long)sbrk(0);
@@ -2302,6 +2303,8 @@ main(int argc, char** argv) {
       ccr749853 = 1; 
     } else if (strcmp(*argv, "-ccr1688946") == 0) {
       ccr1688946 = 1; 
+    } else if (strcmp(*argv, "-ccr1709089") == 0) {
+      ccr1709089 = 1;
     } else if (argv[0][0] != '-') {
       if (numInFile >= 100) {
         fprintf(stderr, "ERROR: too many input files, max = 3.\n");
@@ -2564,7 +2567,19 @@ main(int argc, char** argv) {
       if (status != LEFW_OK)
          return 1;
   
+      if (ccr1709089) {
+        // CCR 1709089 test.
+        // Non-initialized lefData case.
+        lefrSetLimitPerMsg(10000, 10000);
+      }
+
       res = lefrRead(f, inFile[fileCt], (void*)userData);
+
+      if (ccr1709089) {
+        // CCR 1709089 test.
+        // Initialized lefData case.
+        lefrSetLimitPerMsg(10000, 10000);
+      }
 
       if (res)
          fprintf(stderr, "Reader returns bad status.\n", inFile[fileCt]);
