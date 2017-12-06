@@ -20,9 +20,9 @@
 // For updates, support, or to become part of the LEF/DEF Community,
 // check www.openeda.org for details.
 // 
-//  $Author: dell $
-//  $Revision: #1 $
-//  $Date: 2017/06/06 $
+//  $Author: icftcm $
+//  $Revision: #2 $
+//  $Date: 2017/08/28 $
 //  $State:  $
 // *****************************************************************************
 // *****************************************************************************
@@ -281,9 +281,9 @@ defrData::IncCurPos(char **curPos, char **buffer, int *bufferSize)
 
 
 int
-defrData::DefGetToken(char **buffer, int *bufferSize)
+defrData::DefGetToken(char **buf, int *bufferSize)
 {
-    char *s = *buffer;
+    char *s = *buf;
     int ch;
 
     ntokens++;
@@ -309,7 +309,7 @@ defrData::DefGetToken(char **buffer, int *bufferSize)
 
     if (ch == '\n') {
        *s = ch; 
-       IncCurPos(&s, buffer, bufferSize);
+       IncCurPos(&s, buf, bufferSize);
 
        *s = '\0';
        return TRUE;
@@ -345,7 +345,7 @@ defrData::DefGetToken(char **buffer, int *bufferSize)
           }
 
           *s = ch;
-          IncCurPos(&s, buffer, bufferSize);
+          IncCurPos(&s, buf, bufferSize);
 
           ch = GETC();
 
@@ -374,7 +374,7 @@ defrData::DefGetToken(char **buffer, int *bufferSize)
              break;
 
           *s = ch;
-          IncCurPos(&s, buffer, bufferSize);        
+          IncCurPos(&s, buf, bufferSize);        
        }
     }
     else { /* we are case insensitive, use a different loop */
@@ -392,7 +392,7 @@ defrData::DefGetToken(char **buffer, int *bufferSize)
              break;
 
           *s = (ch >= 'a' && ch <= 'z')? (ch -'a' + 'A') : ch;            
-          IncCurPos(&s, buffer, bufferSize);
+          IncCurPos(&s, buf, bufferSize);
        }
     }
    
@@ -1334,21 +1334,21 @@ defrData::DEFCASE(const char* ch)
 }
 
 void
-defrData::pathIsDone(int  shield, int  reset, int  netOsnet, int  *needCbk)
+defrData::pathIsDone(int  sh, int  reset, int  osNet, int  *needCbk)
 {
     if ((callbacks->NetCbk || callbacks->SNetCbk) && settings->AddPathToNet) {
         //PathObj.reverseOrder();
         if (Subnet) {
-            // if (shield)
+            // if (sh)
             //    defrSubnet->addShieldPath(defrPath);
             // else 
-            Subnet->addWirePath(&PathObj, reset, netOsnet,
+            Subnet->addWirePath(&PathObj, reset, osNet,
                                          needCbk);
         } else {
-            if (shield)
-                Net.addShieldPath(&PathObj, reset, netOsnet, needCbk);
+            if (sh)
+                Net.addShieldPath(&PathObj, reset, osNet, needCbk);
             else
-                Net.addWirePath(&PathObj, reset, netOsnet, needCbk);
+                Net.addWirePath(&PathObj, reset, osNet, needCbk);
         }
     } else if (callbacks->PathCbk) {
         //defrPath->reverseOrder();
