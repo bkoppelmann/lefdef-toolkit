@@ -1,6 +1,6 @@
 // *****************************************************************************
 // *****************************************************************************
-// Copyright 2013-2014, Cadence Design Systems
+// Copyright 2013-2017, Cadence Design Systems
 // 
 // This  file  is  part  of  the  Cadence  LEF/DEF  Open   Source
 // Distribution,  Product Version 5.8. 
@@ -20,9 +20,9 @@
 // For updates, support, or to become part of the LEF/DEF Community,
 // check www.openeda.org for details.
 // 
-//  $Author: dell $
-//  $Revision: #1 $
-//  $Date: 2017/06/06 $
+//  $Author: icftcm $
+//  $Revision: #2 $
+//  $Date: 2017/06/19 $
 //  $State:  $
 // *****************************************************************************
 // *****************************************************************************
@@ -289,7 +289,7 @@ int defiSubnet::isCover() const {
 }
 
 
-void defiSubnet::bumpName(int size) {
+void defiSubnet::bumpName(long long  size) {
   if (name_) free(name_);
   name_ = (char*)malloc(size);
   nameSize_ = size;
@@ -297,12 +297,12 @@ void defiSubnet::bumpName(int size) {
 }
 
 
-void defiSubnet::bumpPins(int size) {
+void defiSubnet::bumpPins(long long size) {
   char** newInstances = (char**)malloc(sizeof(char*)*size);
   char** newPins = (char**)malloc(sizeof(char*)*size);
   char* newMusts = (char*)malloc(size);
   char* newSyn = (char*)malloc(size);
-  int i;
+  long long i;
 
   if (instances_) {
     for (i = 0; i < pinsAllocated_; i++) {
@@ -447,8 +447,8 @@ int defiSubnet::numPaths() const {
 }
  
 // WMD -- this will be removed after the next release
-void defiSubnet::bumpPaths(int size) {
-  int i;
+void defiSubnet::bumpPaths(long long size) {
+  long long i;
   defiPath** newPaths = new defiPath*[size];
  
   for (i = 0; i < numPaths_; i++)
@@ -681,8 +681,8 @@ void defiShield::clear() {
 }
 
 
-void defiShield::bumpPaths(int size) {
-  int i;
+void defiShield::bumpPaths(long long size) {
+  long long i;
 
   defiPath** newPaths = new defiPath*[size];
 
@@ -827,8 +827,8 @@ void defiWire::clear() {
 }
 
 
-void defiWire::bumpPaths(int size) {
-  int i;
+void defiWire::bumpPaths(long long size) {
+  long long i;
   defiPath** newPaths =  new defiPath*[size]; 
 
   for (i = 0; i < numPaths_; i++)
@@ -1560,7 +1560,7 @@ void defiNet::print(FILE* f) const {
 }
 
 
-void defiNet::bumpName(int size) {
+void defiNet::bumpName(long long size) {
   if (name_) free(name_);
   name_ = (char*)malloc(size);
   nameSize_ = size;
@@ -1568,12 +1568,12 @@ void defiNet::bumpName(int size) {
 }
 
 
-void defiNet::bumpPins(int size) {
+void defiNet::bumpPins(long long size) {
   char** newInstances = (char**)malloc(sizeof(char*)*size);
   char** newPins = (char**)malloc(sizeof(char*)*size);
   char* newMusts = (char*)malloc(size);
   char* newSyn = (char*)malloc(size);
-  int i;
+  long long i;
 
   if (instances_) {
     for (i = 0; i < pinsAllocated_; i++) {
@@ -1596,12 +1596,12 @@ void defiNet::bumpPins(int size) {
 }
 
 
-void defiNet::bumpProps(int size) {
+void defiNet::bumpProps(long long size) {
   char**  newNames = (char**)malloc(sizeof(char*)*size);
   char**  newValues = (char**)malloc(sizeof(char*)*size);
   double* newDValues = (double*)malloc(sizeof(double)*size);
   char*   newTypes = (char*)malloc(sizeof(char)*size);
-  int i;
+  long long i;
 
   if (propNames_) {
     for (i = 0; i < numProps_; i++) {
@@ -1624,7 +1624,7 @@ void defiNet::bumpProps(int size) {
 }
 
 
-void defiNet::bumpSubnets(int size) {
+void defiNet::bumpSubnets(long long size) {
   defiSubnet** newSubnets = (defiSubnet**)malloc(sizeof(defiSubnet*)*size);
   int i;
   if (subnets_) {
@@ -2131,8 +2131,8 @@ const char* defiNet::nonDefaultRule() const {
 }
 
 // WMD -- this will be removed by the next release
-void defiNet::bumpPaths(int size) {
-  int i;
+void defiNet::bumpPaths(long long size) {
+  long long i;
 
   defiPath** newPaths = new defiPath*[size];
  
@@ -2184,9 +2184,9 @@ const defiWire* defiNet::wire(int index) const {
 }
 
 
-void defiNet::bumpShieldNets(int size) {
+void defiNet::bumpShieldNets(long long size) {
   char** newShieldNets = (char**)malloc(sizeof(char*)*size);
-  int i;
+  long long i;
  
   if (shieldNet_) {
     for (i = 0; i < shieldNetsAllocated_; i++) {
