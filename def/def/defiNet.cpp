@@ -21,8 +21,8 @@
 // check www.openeda.org for details.
 // 
 //  $Author: icftcm $
-//  $Revision: #2 $
-//  $Date: 2017/06/19 $
+//  $Revision: #4 $
+//  $Date: 2017/09/14 $
 //  $State:  $
 // *****************************************************************************
 // *****************************************************************************
@@ -1399,7 +1399,7 @@ void defiNet::freeWire() {
   if (numWires_) {
     for (i = 0; i < numWires_; i++) {
       wires_[i]->Destroy();
-      free((char*)(wires_[i]));
+      delete wires_[i];
       wires_[i] = 0;
     }
     free((char*)(wires_));

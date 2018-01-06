@@ -2084,10 +2084,10 @@ lefwLayerRoutingMinimumcutLengthWithin(double   length,
     // lefwLayerRoutingMinimumcut has not being called or
     // lefwLayerRoutingMinimumcutLengthWithin has already called
     if (lefwWriteEncrypt)
-        encPrint(lefwFile, (char*) "\n     LENGTH %.11g WITHIN %.11g ",
+        encPrint(lefwFile, (char*) "     LENGTH %.11g WITHIN %.11g ",
                  length, distance);
     else
-        fprintf(lefwFile, "\n     LEGNTH %.11g WITHIN %.11g ", length, distance);
+        fprintf(lefwFile, "     LENGTH %.11g WITHIN %.11g ", length, distance);
     lefwLines++;
     prtSemiColon = 1;
     lefwIsRoutingMinCutLen = 1;
