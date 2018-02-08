@@ -22,6 +22,7 @@ endif
 ifeq ($(OS_TYPE),Linux)
     ARCH=lnx86 
     CXX=g++
+    CXXFLAGS=-fPIC
     CC=gcc
 endif
 
