@@ -5,20 +5,19 @@
     <title>LEF/DEF 5.8 Language Reference -- C</title>
 <META NAME="Approver" CONTENT="Technical Publications">
 <META NAME="Author" CONTENT="Technical Publications">
-<META NAME="CreateDate" CONTENT="2017-04-26">
-<META NAME="CreateTime" CONTENT="1493186672">
+<META NAME="CreateDate" CONTENT="2018-02-06">
+<META NAME="CreateTime" CONTENT="1517908046">
 <META NAME="DataType" CONTENT="Manuals">
 <META NAME="Description" CONTENT="Describes the syntax for Library Exchange Format (LEF) and Design Exchange Format (DEF) files.">
 <META NAME="DocTitle" CONTENT="LEF/DEF 5.8 Language Reference">
 <META NAME="DocType" CONTENT="Reference">
-<META NAME="EdmsRelease" CONTENT="FM-Wiki-1.0_P005">
+<META NAME="EdmsRelease" CONTENT="FM-Wiki-2.0_HF1">
 <META NAME="FileTitle" CONTENT="C">
-<META NAME="Keywords" CONTENT="">
 <META NAME="FileType" CONTENT="Chapter">
 <META NAME="Keyword" CONTENT="lefdefref">
 <META NAME="Language" CONTENT="English">
-<META NAME="ModifiedDate" CONTENT="2017-04-26">
-<META NAME="ModifiedTime" CONTENT="1493186672">
+<META NAME="ModifiedDate" CONTENT="2018-02-06">
+<META NAME="ModifiedTime" CONTENT="1517908046">
 <META NAME="NextFile" CONTENT="lefdefrefIX.html">
 <META NAME="PageCount" CONTENT="42">
 <META NAME="Platform" CONTENT="ALL">
@@ -26,8 +25,7 @@
 <META NAME="Product" CONTENT="Innovus, Languages">
 <META NAME="ProductFamily" CONTENT="Digital Implementation, Cadence Shared Tools">
 <META NAME="ProductVersion" CONTENT="5.8">
-<META NAME="Syntax" CONTENT="PAR(N1,1,G1) = PAR(N1,1,G2)">
-<META NAME="RightsManagement" CONTENT="Copyright 2017 Cadence Design Systems Inc.">
+<META NAME="RightsManagement" CONTENT="Copyright 2018 Cadence Design Systems Inc.">
 <META NAME="Title" CONTENT="LEF/DEF 5.8 Language Reference -- C">
 <META NAME="TopicTags" CONTENT="FALSE">
 <META NAME="Version" CONTENT="5.8">
@@ -45,14 +43,15 @@
       <tr>
         <td height="20" width="59">
 <a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+
                 </td>
 <td height="20" width="73">
 <a href="lefdefrefTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
 </td>
-
 <td height="20" width="46">
-<a href="lefdefrefIX.html"><img src="../support/nav2_index.gif" border="0"></a>
+<img src="../support/nav2_index_b.gif" border="0">
 </td>
+
         <td>
           <a href="OptimizingLEFTechnology.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
         </td>
@@ -62,19 +61,24 @@
         <td height="20">
           <a>
 <a href="lefdefref.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+
           </a>
         </td>
         <td height="20" width="61">
 <img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+
         </td>
         <td height="20" width="76">
 <a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+
         </td>
         <td height="20" width="43">
 <a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+
         </td>
         <td height="20" width="37">
 <a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+
         </td>
       </tr>
     </table>
@@ -136,7 +140,7 @@
                 </nobr>
               </div>
             </td>
-            <td><a href="#CalculatingAntennaRatios" title="C" name="1034537"><font color="Blue"><u>Calculating Antenna Ratios</u></font></a><a href="#CalculatingAntennaRatios" title="C"> </a></td>
+            <td><a href="#1034900" title="C" name="1034537"><font color="Blue"><u>Calculating Antenna Ratios</u></font></a><a href="#1034900" title="C"> </a></td>
           </tr>
         </table>
       </div>
@@ -192,7 +196,7 @@
                 </nobr>
               </div>
             </td>
-            <td><a href="#CalculateHierDesign" title="C" name="1034561"><font color="Blue"><u>Calculations for Hierarchical Designs</u></font></a><a href="#CalculateHierDesign" title="C"> </a></td>
+            <td><a href="#1036921" title="C" name="1034561"><font color="Blue"><u>Calculations for Hierarchical Designs</u></font></a><a href="#1036921" title="C"> </a></td>
           </tr>
         </table>
       </div>
@@ -200,7 +204,7 @@
       <p><a name="1034564">During deep submicron wafer fabrication, gate damage can occur when excessive static charges accumulate and discharge, passing current through a gate. If the area of the layer connected directly to the gate or connected to the gate through lower layers is large relative to the area of the gate and the static charges are discharged through the gate, the discharge can damage the oxide that insulates the gate and cause the chip to fail. This phenomenon is called the </a><font color="#000000"><em>process antenna effect </em></font>(PAE).</p>
       <p><a name="1034565">To determine the extent of the PAE, the router calculates the area of the layer relative to the area of the gates connected to it, or connected to it through lower layers. The number it calculates is called the </a><font color="#000000"><em>antenna ratio</em></font>. Each foundry sets a maximum allowable antenna ratio for the chips it fabricates.</p>
       <p><a name="1034566">For example, assume a foundry sets a maximum allowable antenna ratio of 500. If a net has two input gates that each have an area of 1 square micron, any metal layers that connect to the gates and have an area larger than 1,000 square microns have process antenna violations because they would cause the antenna ratio to be higher than 500:</a></p>
-      <p align="left"><a name="1034589"><img src="images/PAE.10.1.01.png" alt=""><br></a></p>
+      <p align="left"><a name="1034589"><img src="images/PAE.10.1.01.png" width="675" height="57" alt=""><br></a></p>
       <p><a name="1038918">To tell the router the values to use when it calculates the antenna ratio, you set antenna keywords in the LEF and DEF files. The router measures potential damage caused by PAE by checking the ratio it calculates against the values specified by the antenna keywords. When it finds a net whose antenna ratio for a specified layer exceeds the maximum allowed value for that layer, it finds a </a><font color="#000000"><em>process antenna violation</em></font> and attempts to fix it using one or both of the following methods:</p>
       <div>
         <table border="0" cellspacing="0" cellpadding="3" summary="">
@@ -239,7 +243,7 @@
         <strong><font color="#000000"><strong>Figure C&#45;1&nbsp; </strong></font></strong>
         <strong><a name="1037490">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1034669"><img src="images/PAE.10.1.02.png" alt=""><br></a></p>
+      <p align="left"><a name="1034669"><img src="images/PAE.10.1.02.png" width="675" height="203" alt=""><br></a></p>
       <p><a name="1034670">In the figure,</a></p>
       <div>
         <table border="0" cellspacing="0" cellpadding="3" summary="">
@@ -460,7 +464,7 @@
         <strong><font color="#000000"><strong>Figure C&#45;2&nbsp; </strong></font></strong>
         <strong><a name="1037503">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1034777"><img src="images/PAE.10.1.03.png" alt=""><br></a></p>
+      <p align="left"><a name="1034777"><img src="images/PAE.10.1.03.png" width="675" height="290" alt=""><br></a></p>
       <h3><a name="1034778">What Can Be Done to Improve the Antenna Ratio?</a></h3>
       <p><a name="1034779">If there is an alternate path for the current to flow, the charge on the node can be discharged through the alternate path before the voltage potential reaches a level that damages the gate. For example, a Zener diode, which allows current to flow in the reverse direction when the reverse bias reaches a specified breakdown voltage, provides an alternate path, and helps avoid building up so much charge at the node that the charge is discharged through the gate oxide. Diffusion features that form the output of a logic gate (source and drain of transistors) can provide such an alternate discharge path.</a></p>
       <p><a name="1034780">Routers typically use two methods to decrease the antenna ratio:</a></p>
@@ -498,7 +502,6 @@
       <p><a name="1034866">The following table lists LEF version 5.5 antenna keywords. </a></p>
       <p align="left"><a name="1034898">&nbsp;</a></p>
       <table summary="" border="0" cellpadding="4" cellspacing="0" bordercolor="#D3D3D3" width="648">
-        <caption>
         <tr>
           <td cellpadding="4" border="0" bordercolor="#D3D3D3" valign="middle" width="127">
             <p>
@@ -623,7 +626,7 @@
         <strong><font color="#000000"><strong>Figure C&#45;3&nbsp; </strong></font></strong>
         <strong><a name="1037510">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1034932"><img src="images/PAE.10.1.04.png" alt=""><br></a></p>
+      <p align="left"><a name="1034932"><img src="images/PAE.10.1.04.png" width="675" height="115" alt=""><br></a></p>
       <h4><a name="1034933">Antenna Area Factor</a></h4>
       <p><a name="1034934">You can increase or decrease the calculated antenna area by specifying an antenna area factor in the LEF file. </a></p>
       <div>
@@ -658,11 +661,11 @@
       <p><a name="1039661">The final ratio check can be scaled (that is, made more or less pessimistic) by using the </a><font size="2" face="'Courier New'" color="#000000">ANTENNAAREAFACTOR</font> or <font size="2" face="'Courier New'" color="#000000">ANTENNASIDEAREAFACTOR</font> values that are used to multiply the final PAR and CAR values. </p>
       <p><font color="#000000"><strong>Note: </strong></font><a name="1039662">The LEF and DEF </a><font size="2" face="'Courier New'" color="#000000">ANTENNA</font> values are always unscaled values; only the final ratio&#45;check is affected by the scale factors.</p>
       <h3><a name="1034939">Calculating a PAR</a></h3>
-      <p><a name="1040012">The general PAR(m</a><font color="#000000"><sub>1</sub></font>) equation for a single layer is calculated as:<br><img src="images/PAE.10.1.05.png" alt=""><br> </p>
+      <p><a name="1040012">The general PAR(m</a><font color="#000000"><sub>1</sub></font>) equation for a single layer is calculated as:<br><img src="images/PAE.10.1.05.png" width="658" height="60" alt=""><br> </p>
       <p><a name="1040048">The existing </a><font size="2" face="'Courier New'" color="#000000">ANTENNAAREAFACTOR</font> statement is shown as <font size="2" face="'Courier New'" color="#000000"><em>metalFactor</em></font> for the metal area. It has no effect on the diff_area, gate_area, or cut_area shown. Likewise, the <font size="2" face="'Courier New'" color="#000000">ANTENNAAREADIFFREDUCEPWL</font> statement is shown as <font size="2" face="'Courier New'" color="#000000"><em>diffMetalReduceFactor</em></font>, the <font size="2" face="'Courier New'" color="#000000">ANTENNAAREAMINUSDIFF</font> statement is shown as <font size="2" face="'Courier New'" color="#000000"><em>minusDiffFactor</em></font>, and the <font size="2" face="'Courier New'" color="#000000">ANTENNAGATEPLUSDIFF</font> statement is shown as <font size="2" face="'Courier New'" color="#000000"><em>plusDiffFactor</em></font>. For cut layer, the ratio equation illustrates the effect of an <font size="2" face="'Courier New'" color="#000000">ANTENNAAREAFACTOR</font> <font size="2" face="'Courier New'" color="#000000"><em>cutFactor</em></font> statement as <font size="2" face="'Courier New'" color="#000000"><em>metalFactor</em></font>. If there is no preceding <font size="2" face="'Courier New'" color="#000000">ANTENNAAREAFACTOR</font> statement, the <font size="2" face="'Courier New'" color="#000000"><em>metalFactor</em></font> value defaults to <font size="2" face="'Courier New'" color="#000000">1.0</font>. </p>
       <p><a name="1040071">For single layer rules, the PAR value is compared to </a><font size="2" face="'Courier New'" color="#000000">ANTENNA[SIDE]AREARATIO</font> and&#47;or <font size="2" face="'Courier New'" color="#000000">ANTENNADIFF[SIDE]AREARATIO</font>, as appropriate. For cumulative layer rules, the CAR values is compared to <font size="2" face="'Courier New'" color="#000000">ANTENNACUM[SIDE]AREARATIO</font> and&#47;or <font size="2" face="'Courier New'" color="#000000">ANTENNACUMDIFF[SIDE]AREARATIO</font>, as appropriate.</p>
       <p><a name="1034940">The following example uses a simplified formula to calculate a PAR, without including the various area factors:</a></p>
-      <p align="left"><a name="1034944"><img src="images/PAE.10.1.06.png" alt=""><br></a></p>
+      <p align="left"><a name="1034944"><img src="images/PAE.10.1.06.png" width="642" height="125" alt=""><br></a></p>
       <p><a name="1034945"><font size="2" face="'Courier New'" color="#000000">PAR(N</font></a><font face="'Courier New'" color="#000000"><sub><em>i</em></sub></font><font color="#000000"><sub>,</sub></font><font face="'Courier New'" color="#000000"><sub><em>j</em></sub></font>, G<font face="'Courier New'" color="#000000"><sub><em>k</em></sub></font><font size="2" face="'Courier New'" color="#000000">)</font> is the partial antenna ratio for node <font size="2" face="'Courier New'" color="#000000"><em>j</em></font> on <font color="#000000"><em>metal</em></font><font color="#000000"><sub><em>i</em></sub></font> with respect to gate <font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub><em>k</em></sub></font>, where <font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub><em>k</em></sub></font> is electrically connected to node <font size="2" face="'Courier New'" color="#000000">N</font><font face="'Courier New'" color="#000000"><sub><em>i</em></sub></font><font face="'Courier New'" color="#000000"><sub>,</sub></font><font face="'Courier New'" color="#000000"><sub><em>j</em></sub></font> by layer <font size="2" face="'Courier New'" color="#000000"><em>i</em></font> or below.</p>
       <p><a name="1034946"><font size="2" face="'Courier New'" color="#000000">Area(N</font></a><font face="'Courier New'" color="#000000"><sub><em>i</em></sub></font><font face="'Courier New'" color="#000000"><sub>,</sub></font><font face="'Courier New'" color="#000000"><sub><em>j</em></sub></font><font size="2" face="'Courier New'" color="#000000">)</font> is the drawn or side area of node <font size="2" face="'Courier New'" color="#000000">N</font><font face="'Courier New'" color="#000000"><sub><em>i</em></sub></font><font face="'Courier New'" color="#000000"><sub>,</sub></font><font face="'Courier New'" color="#000000"><sub><em>j</em></sub></font>.</p>
       <p><a name="1034948"><font size="2" face="'Courier New'" color="#000000">C(N</font></a><font face="'Courier New'" color="#000000"><sub><em>i</em></sub></font><font face="'Courier New'" color="#000000"><sub>,</sub></font><font face="'Courier New'" color="#000000"><sub><em>j</em></sub></font><font size="2" face="'Courier New'" color="#000000">)</font> is the set of gates <font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub><em>k</em></sub></font> that are electrically connected to <font size="2" face="'Courier New'" color="#000000">N</font><font face="'Courier New'" color="#000000"><sub><em>i</em></sub></font><font face="'Courier New'" color="#000000"><sub>,</sub></font><font face="'Courier New'" color="#000000"><sub><em>j</em></sub></font> through the layers below <font color="#000000"><em>metal</em></font><font color="#000000"><sub><em>i</em></sub></font>. </p>
@@ -674,27 +677,27 @@
         <strong><font color="#000000"><strong>Figure C&#45;4&nbsp; </strong></font></strong>
         <strong><a name="1037515">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1035005"><img src="images/PAE.10.1.07.png" alt=""><br></a></p>
+      <p align="left"><a name="1035005"><img src="images/PAE.10.1.07.png" width="675" height="191" alt=""><br></a></p>
       <p><a name="1035006">To calculate </a><font size="2" face="'Courier New'" color="#000000">PAR(N</font><font face="'Courier New'" color="#000000"><sub><em>i</em></sub></font><font face="'Courier New'" color="#000000"><sub>,</sub></font><font face="'Courier New'" color="#000000"><sub><em>j</em></sub></font><font size="2" face="'Courier New'" color="#000000">,</font> <font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub><em>k</em></sub></font><font size="2" face="'Courier New'" color="#000000">)</font> for node <font size="2" face="'Courier New'" color="#000000">N</font><font face="'Courier New'" color="#000000"><sub>1,1</sub></font>, a node on the first metal layer, with respect to gate <font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub>1</sub></font>, use the following formula:</p>
-      <p align="left"><a name="1035019"><img src="images/PAE.10.1.08.png" alt=""><br></a></p>
+      <p align="left"><a name="1035019"><img src="images/PAE.10.1.08.png" width="675" height="55" alt=""><br></a></p>
       <p><a name="1035020">Because gates </a>G<font face="'Courier New'" color="#000000"><sub>1</sub></font> and G<font face="'Courier New'" color="#000000"><sub>2</sub></font> both connect to node N<font face="'Courier New'" color="#000000"><sub>1,1</sub></font>, the following statement is true:</p>
       <dl>
         <font size="2" face="'Courier New'" color="#000000"><a name="1035021">PAR(N</a><font face="'Courier New'" color="#000000"><sub>1,1</sub></font>,G<font face="'Courier New'" color="#000000"><sub>1</sub></font>) = PAR(N<font face="'Courier New'" color="#000000"><sub>1,1</sub></font>,G<font face="'Courier New'" color="#000000"><sub>2</sub></font>)</font>
       </dl>
       <p><a name="1035022">To calculate </a><font size="2" face="'Courier New'" color="#000000">PAR</font> for node <font size="2" face="'Courier New'" color="#000000">N</font><font face="'Courier New'" color="#000000"><sub>1,2</sub></font>, another node on the first metal layer, with respect to gate <font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub>3</sub></font>, use the following formula:</p>
-      <p align="left"><a name="1035035"><img src="images/PAE.10.1.09.png" alt=""><br></a></p>
+      <p align="left"><a name="1035035"><img src="images/PAE.10.1.09.png" width="675" height="55" alt=""><br></a></p>
       <p><a name="1035036">To calculate </a><font size="2" face="'Courier New'" color="#000000">PAR(N</font><font face="'Courier New'" color="#000000"><sub><em>i</em></sub></font><font face="'Courier New'" color="#000000"><sub>,</sub></font><font face="'Courier New'" color="#000000"><sub><em>j</em></sub></font><font size="2" face="'Courier New'" color="#000000">,</font> <font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub><em>k</em></sub></font><font size="2" face="'Courier New'" color="#000000">)</font> for node <font size="2" face="'Courier New'" color="#000000">N</font><font face="'Courier New'" color="#000000"><sub>1,3</sub></font>, another node on the first metal layer, with respect to gate <font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub>4</sub></font>, use the following formula:</p>
-      <p align="left"><a name="1035049"><img src="images/PAE.10.1.10.png" alt=""><br></a></p>
+      <p align="left"><a name="1035049"><img src="images/PAE.10.1.10.png" width="675" height="52" alt=""><br></a></p>
       <h4><a name="1035051">Calculations for PAR on the Second Metal Layer</a></h4>
       <p><a href="#1037520" title="C" name="1035052"><font color="Blue"><u>Figure&nbsp;C&#45;5</u></font></a><a href="#1037520" title="C"></a> shows the chip after the second metal layer is processed.</p>
       <p>
         <strong><font color="#000000"><strong>Figure C&#45;5&nbsp; </strong></font></strong>
         <strong><a name="1037520">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1035130"><img src="images/PAE.10.1.11.png" alt=""><br></a></p>
+      <p align="left"><a name="1035130"><img src="images/PAE.10.1.11.png" width="675" height="263" alt=""><br></a></p>
       <p><a name="1035131"><font size="2" face="'Courier New'" color="#000000">N</font></a><font face="'Courier New'" color="#000000"><sub>2,1</sub></font> consists of two pieces of metal on the second layer that are electrically connected at this step in the fabrication process. Therefore, to calculate <font size="2" face="'Courier New'" color="#000000">PAR(N</font><font face="'Courier New'" color="#000000"><sub>2,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>1</sub></font><font size="2" face="'Courier New'" color="#000000">)</font>, you must add the area of both pieces together.</p>
       <p><a name="1035132">To calculate </a><font size="2" face="'Courier New'" color="#000000">PAR(N</font><font face="'Courier New'" color="#000000"><sub><em>i</em></sub></font><font face="'Courier New'" color="#000000"><sub>,</sub></font><font face="'Courier New'" color="#000000"><sub><em>j</em></sub></font><font size="2" face="'Courier New'" color="#000000">,</font><font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub><em>k</em></sub></font><font size="2" face="'Courier New'" color="#000000">)</font> for node <font size="2" face="'Courier New'" color="#000000">N</font><font face="'Courier New'" color="#000000"><sub>2,1</sub></font>, a node on the second metal layer, with respect to gate <font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub>1</sub></font>, use the following formula:</p>
-      <p align="left"><a name="1035145"><img src="images/PAE.10.1.12.png" alt=""><br></a></p>
+      <p align="left"><a name="1035145"><img src="images/PAE.10.1.12.png" width="675" height="55" alt=""><br></a></p>
       <p><a name="1035146">As on the first layer,</a></p>
       <p>
         <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1035147">PAR(N</a><font face="'Courier New'" color="#000000"><sub>2,1</sub></font>,G<font face="'Courier New'" color="#000000"><sub>1</sub></font>) = PAR(N<font face="'Courier New'" color="#000000"><sub>2,1</sub></font>,G<font face="'Courier New'" color="#000000"><sub>2</sub></font>) = PAR(N<font face="'Courier New'" color="#000000"><sub>2,1</sub></font>,G<font face="'Courier New'" color="#000000"><sub>3</sub></font>)</font>
@@ -705,9 +708,9 @@
         <strong><font color="#000000"><strong>Figure C&#45;6&nbsp; </strong></font></strong>
         <strong><a name="1037525">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1035234"><img src="images/PAE.10.1.13.png" alt=""><br></a></p>
+      <p align="left"><a name="1035234"><img src="images/PAE.10.1.13.png" width="675" height="304" alt=""><br></a></p>
       <p><a name="1035235">To calculate </a><font size="2" face="'Courier New'" color="#000000">PAR(N</font><font face="'Courier New'" color="#000000"><sub><em>i</em></sub></font><font face="'Courier New'" color="#000000"><sub>,</sub></font><font face="'Courier New'" color="#000000"><sub><em>j</em></sub></font><font size="2" face="'Courier New'" color="#000000">,</font> <font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub><em>k</em></sub></font><font size="2" face="'Courier New'" color="#000000">)</font>for node <font size="2" face="'Courier New'" color="#000000">N</font><font face="'Courier New'" color="#000000"><sub>3,1</sub></font>, a node on the third metal layer, with respect to gate <font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub>1</sub></font>, use the following formula:</p>
-      <p align="left"><a name="1035248"><img src="images/PAE.10.1.14.png" alt=""><br></a></p>
+      <p align="left"><a name="1035248"><img src="images/PAE.10.1.14.png" width="675" height="55" alt=""><br></a></p>
       <p><a name="1035249">As on the prior layers,</a></p>
       <p>
         <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1035250">PAR(N</a><font face="'Courier New'" color="#000000"><sub>3,1</sub></font>,G<font face="'Courier New'" color="#000000"><sub>1</sub></font>) = PAR(N<font face="'Courier New'" color="#000000"><sub>3,1</sub></font>,G<font face="'Courier New'" color="#000000"><sub>2</sub></font>) = PAR(N<font face="'Courier New'" color="#000000"><sub>3,1</sub></font>,G<font face="'Courier New'" color="#000000"><sub>3</sub></font>) = PAR(N<font face="'Courier New'" color="#000000"><sub>3,1</sub></font>,G<font face="'Courier New'" color="#000000"><sub>4</sub></font>)</font>
@@ -718,9 +721,9 @@
         <strong><font color="#000000"><strong>Figure C&#45;7&nbsp; </strong></font></strong>
         <strong><a name="1037530">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1035343"><img src="images/PAE.10.1.15.png" alt=""><br></a></p>
+      <p align="left"><a name="1035343"><img src="images/PAE.10.1.15.png" width="675" height="363" alt=""><br></a></p>
       <p><a name="1035344">To calculate </a><font size="2" face="'Courier New'" color="#000000">PAR(N</font><font face="'Courier New'" color="#000000"><sub><em>i</em></sub></font><font size="2" face="'Courier New'" color="#000000">,</font><font face="'Courier New'" color="#000000"><sub><em>j</em></sub></font><font size="2" face="'Courier New'" color="#000000">,</font> <font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub><em>k</em></sub></font><font size="2" face="'Courier New'" color="#000000">)</font> for the fourth metal layer, use the following formula:</p>
-      <p align="left"><a name="1035357"><img src="images/PAE.10.1.16.png" alt=""><br></a></p>
+      <p align="left"><a name="1035357"><img src="images/PAE.10.1.16.png" width="675" height="55" alt=""><br></a></p>
       <p><a name="1035358">As on the prior layers,</a></p>
       <p>
         <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1035359">PAR(N</a><font face="'Courier New'" color="#000000"><sub>4,1</sub></font>,G<font face="'Courier New'" color="#000000"><sub>1</sub></font>) = PAR(N<font face="'Courier New'" color="#000000"><sub>4,1</sub></font>,G<font face="'Courier New'" color="#000000"><sub>2</sub></font>) = PAR(N<font face="'Courier New'" color="#000000"><sub>4,1</sub></font>,G<font face="'Courier New'" color="#000000"><sub>3</sub></font>) = PAR(N<font face="'Courier New'" color="#000000"><sub>4,1</sub></font>,G<font face="'Courier New'" color="#000000"><sub>4</sub></font>)</font>
@@ -737,7 +740,7 @@
         <strong><font color="#000000"><strong>Figure C&#45;8&nbsp; </strong></font></strong>
         <strong><a name="1037643">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1035454"><img src="images/PAE.10.1.17.png" alt=""><br></a></p>
+      <p align="left"><a name="1035454"><img src="images/PAE.10.1.17.png" width="675" height="349" alt=""><br></a></p>
       <div>
         <table border="0" cellspacing="0" cellpadding="3" summary="">
           <tr valign="baseline">
@@ -763,7 +766,7 @@
         <strong><font color="#000000"><strong>Figure C&#45;9&nbsp; </strong></font></strong>
         <strong><a name="1037535">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1035507"><img src="images/PAE.10.1.18.png" alt=""><br></a></p>
+      <p align="left"><a name="1035507"><img src="images/PAE.10.1.18.png" width="675" height="139" alt=""><br></a></p>
       <p><a name="1035508">In the figure above,</a></p>
       <p><a name="1035509"><font size="2" face="'Courier New'" color="#000000">CAR(N</font></a><font face="'Courier New'" color="#000000"><sub>1,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>1</sub></font><font size="2" face="'Courier New'" color="#000000">) = PAR(N</font><font face="'Courier New'" color="#000000"><sub>1,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>1</sub></font><font size="2" face="'Courier New'" color="#000000">)</font></p>
       <p><a name="1035510"><font size="2" face="'Courier New'" color="#000000">CAR(N</font></a><font face="'Courier New'" color="#000000"><sub>1,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>2</sub></font><font size="2" face="'Courier New'" color="#000000">) = PAR(N</font><font face="'Courier New'" color="#000000"><sub>1,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>2</sub></font><font size="2" face="'Courier New'" color="#000000">)</font></p>
@@ -775,7 +778,7 @@
         <strong><font color="#000000"><strong>Figure C&#45;10&nbsp; </strong></font></strong>
         <strong><a name="1037540">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1037728"><img src="images/PAE.10.1.19.png" alt=""><br></a></p>
+      <p align="left"><a name="1037728"><img src="images/PAE.10.1.19.png" width="675" height="234" alt=""><br></a></p>
       <div>
         <table border="0" cellspacing="0" cellpadding="3" summary="">
           <tr valign="baseline">
@@ -806,7 +809,7 @@
         <strong><font color="#000000"><strong>Figure C&#45;11&nbsp; </strong></font></strong>
         <strong><a name="1037545">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1035685"><img src="images/PAE.10.1.20.png" alt=""><br></a></p>
+      <p align="left"><a name="1035685"><img src="images/PAE.10.1.20.png" width="675" height="287" alt=""><br></a></p>
       <h4>
         <em></em>
         <em><a name="1035686">Gate G</a><font color="#000000"><strong><sub>1</sub></strong></font></em>
@@ -830,7 +833,7 @@
         <strong><font color="#000000"><strong>Figure C&#45;12&nbsp; </strong></font></strong>
         <strong><a name="1037550">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1035776"><img src="images/PAE.10.1.21.png" alt=""><br></a></p>
+      <p align="left"><a name="1035776"><img src="images/PAE.10.1.21.png" width="675" height="254" alt=""><br></a></p>
       <p><a name="1035777">In the figure above,</a></p>
       <p><a name="1035778"><font size="2" face="'Courier New'" color="#000000">CAR(N</font></a><font face="'Courier New'" color="#000000"><sub>3,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>3</sub></font><font size="2" face="'Courier New'" color="#000000">) = PAR(N</font><font face="'Courier New'" color="#000000"><sub>1,2</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>3</sub></font><font size="2" face="'Courier New'" color="#000000">) + PAR(N</font><font face="'Courier New'" color="#000000"><sub>2,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>3</sub></font><font size="2" face="'Courier New'" color="#000000">) + PAR(N</font><font face="'Courier New'" color="#000000"><sub>3,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>3</sub></font><font size="2" face="'Courier New'" color="#000000">)</font></p>
       <p><a name="1035779">In </a><a href="#1037555" title="C"><font color="Blue"><u>Figure&nbsp;C&#45;13</u></font></a><a href="#1037555" title="C"> </a>, the relevant areas for calculating CAR for gate <font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub>4</sub></font> are shaded.</p>
@@ -838,7 +841,7 @@
         <strong><font color="#000000"><strong>Figure C&#45;13&nbsp; </strong></font></strong>
         <strong><a name="1037555">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1035860"><img src="images/PAE.10.1.22.png" alt=""><br></a></p>
+      <p align="left"><a name="1035860"><img src="images/PAE.10.1.22.png" width="675" height="254" alt=""><br></a></p>
       <p><a name="1035861">In the figure above, </a></p>
       <p><a name="1035862"><font size="2" face="'Courier New'" color="#000000">CAR(N</font></a><font face="'Courier New'" color="#000000"><sub>3,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>4</sub></font><font size="2" face="'Courier New'" color="#000000">) = PAR(N</font><font face="'Courier New'" color="#000000"><sub>1,3</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>4</sub></font><font size="2" face="'Courier New'" color="#000000">) + PAR(N</font><font face="'Courier New'" color="#000000"><sub>2,2</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>4</sub></font><font size="2" face="'Courier New'" color="#000000">) + PAR(N</font><font face="'Courier New'" color="#000000"><sub>3,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>4</sub></font><font size="2" face="'Courier New'" color="#000000">)</font></p>
       <h4><a name="1035863">Calculations for CAR on the Fourth Metal Layer</a></h4>
@@ -853,7 +856,7 @@
         <strong><font color="#000000"><strong>Figure C&#45;14&nbsp; </strong></font></strong>
         <strong><a name="1037560">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1035954"><img src="images/PAE.10.1.23.png" alt=""><br></a></p>
+      <p align="left"><a name="1035954"><img src="images/PAE.10.1.23.png" width="675" height="315" alt=""><br></a></p>
       <p><a name="1035955">In the figure above,</a></p>
       <p><a name="1035956"><font size="2" face="'Courier New'" color="#000000">CAR(N</font></a><font face="'Courier New'" color="#000000"><sub>4,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>1</sub></font><font size="2" face="'Courier New'" color="#000000">) = PAR(N</font><font face="'Courier New'" color="#000000"><sub>1,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>1</sub></font><font size="2" face="'Courier New'" color="#000000">) + PAR(N</font><font face="'Courier New'" color="#000000"><sub>2,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>1</sub></font><font size="2" face="'Courier New'" color="#000000">) <br>&nbsp;&nbsp;+ PAR(N</font><font face="'Courier New'" color="#000000"><sub>3,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>1</sub></font><font size="2" face="'Courier New'" color="#000000">) + PAR(N</font><font face="'Courier New'" color="#000000"><sub>4,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>1</sub></font><font size="2" face="'Courier New'" color="#000000">)</font></p>
       <p><a name="1035957"><font size="2" face="'Courier New'" color="#000000">CAR(N</font></a><font face="'Courier New'" color="#000000"><sub>4,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>2</sub></font><font size="2" face="'Courier New'" color="#000000">) = PAR(N</font><font face="'Courier New'" color="#000000"><sub>1,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>2</sub></font><font size="2" face="'Courier New'" color="#000000">) + PAR(N</font><font face="'Courier New'" color="#000000"><sub>2,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>2</sub></font><font size="2" face="'Courier New'" color="#000000">) <br>&nbsp;&nbsp;+ PAR(N</font><font face="'Courier New'" color="#000000"><sub>3,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>2</sub></font><font size="2" face="'Courier New'" color="#000000">) + PAR(N</font><font face="'Courier New'" color="#000000"><sub>4,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>2</sub></font><font size="2" face="'Courier New'" color="#000000">)</font></p>
@@ -867,7 +870,7 @@
         <strong><font color="#000000"><strong>Figure C&#45;15&nbsp; </strong></font></strong>
         <strong><a name="1037567">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1036047"><img src="images/PAE.10.1.24.png" alt=""><br></a></p>
+      <p align="left"><a name="1036047"><img src="images/PAE.10.1.24.png" width="675" height="315" alt=""><br></a></p>
       <p><a name="1036048">In the figure above,</a></p>
       <p><a name="1036049"><font size="2" face="'Courier New'" color="#000000">CAR(N</font></a><font face="'Courier New'" color="#000000"><sub>4,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font color="#000000"><sub>3</sub></font><font size="2" face="'Courier New'" color="#000000">) = PAR(N</font><font face="'Courier New'" color="#000000"><sub>1,2</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>3</sub></font><font size="2" face="'Courier New'" color="#000000">) + PAR(N</font><font face="'Courier New'" color="#000000"><sub>2,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>3</sub></font><font size="2" face="'Courier New'" color="#000000">) <br>&nbsp;&nbsp;+ PAR(N</font><font face="'Courier New'" color="#000000"><sub>3,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>3</sub></font><font size="2" face="'Courier New'" color="#000000">) + PAR(N</font><font face="'Courier New'" color="#000000"><sub>4,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>3</sub></font><font size="2" face="'Courier New'" color="#000000">)</font></p>
       <p><a name="1036050"><font size="2" face="'Courier New'" color="#000000">CAR(N</font></a><font face="'Courier New'" color="#000000"><sub>4,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>3</sub></font><font size="2" face="'Courier New'" color="#000000">)</font> does not equal <font size="2" face="'Courier New'" color="#000000">CAR(N</font><font face="'Courier New'" color="#000000"><sub>4,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>1</sub></font><font size="2" face="'Courier New'" color="#000000">)</font> or <font size="2" face="'Courier New'" color="#000000">CAR(N</font><font face="'Courier New'" color="#000000"><sub>4,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>2</sub></font><font size="2" face="'Courier New'" color="#000000">)</font> because it is not connected to the same node on <font color="#000000"><em>metal1</em></font><font size="2" face="'Courier New'" color="#000000">.</font></p>
@@ -880,14 +883,14 @@
         <strong><font color="#000000"><strong>Figure C&#45;16&nbsp; </strong></font></strong>
         <strong><a name="1037572">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1036139"><img src="images/PAE.10.1.25.png" alt=""><br></a></p>
+      <p align="left"><a name="1036139"><img src="images/PAE.10.1.25.png" width="675" height="315" alt=""><br></a></p>
       <p><a name="1036140">In the figure above,</a></p>
       <p><a name="1036141"><font size="2" face="'Courier New'" color="#000000">CAR(N</font></a><font face="'Courier New'" color="#000000"><sub>4,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>4</sub></font><font size="2" face="'Courier New'" color="#000000">) = PAR(N</font><font face="'Courier New'" color="#000000"><sub>1,3</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>4</sub></font><font size="2" face="'Courier New'" color="#000000">) + PAR(N</font><font face="'Courier New'" color="#000000"><sub>2,2</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>4</sub></font><font size="2" face="'Courier New'" color="#000000">) <br>&nbsp;&nbsp;+ PAR(N</font><font face="'Courier New'" color="#000000"><sub>3,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>4</sub></font><font size="2" face="'Courier New'" color="#000000">) + PAR(N</font><font face="'Courier New'" color="#000000"><sub>4,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>4</sub></font><font size="2" face="'Courier New'" color="#000000">)</font></p>
       <p><a name="1036142"><font size="2" face="'Courier New'" color="#000000">CAR(N</font></a><font face="'Courier New'" color="#000000"><sub>4,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>4</sub></font><font size="2" face="'Courier New'" color="#000000">)</font> does not equal <font size="2" face="'Courier New'" color="#000000">CAR(N</font><font face="'Courier New'" color="#000000"><sub>4,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>1</sub></font><font size="2" face="'Courier New'" color="#000000">)</font>, <font size="2" face="'Courier New'" color="#000000">CAR(N</font><font face="'Courier New'" color="#000000"><sub>4,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>2</sub></font><font size="2" face="'Courier New'" color="#000000">)</font>, or <font size="2" face="'Courier New'" color="#000000">CAR(N</font><font face="'Courier New'" color="#000000"><sub>4,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>3</sub></font><font size="2" face="'Courier New'" color="#000000">) </font>because it is not connected to the same node on <font color="#000000"><em>metal1</em></font><font size="2" face="'Courier New'" color="#000000">.</font></p>
       <h3><a name="1036143">Calculating Ratios for a Cut Layer</a></h3>
       <p><a name="1036144">The router calculates damage from a cut layer separately from damage from a metal layer. Calculations for the cut layers do not use side area modelling. </a></p>
       <h4><a name="1036150">Calculating a PAR on a Cut Layer</a></h4>
-      <p><a name="1040443">The general PAR(c</a><font color="#000000"><sub>i</sub></font>) equation for a single layer is calculated as: <br><img src="images/PAE.10.1.26.png" alt=""><br></p>
+      <p><a name="1040443">The general PAR(c</a><font color="#000000"><sub>i</sub></font>) equation for a single layer is calculated as: <br><img src="images/PAE.10.1.26.png" width="658" height="60" alt=""><br></p>
       <p><a name="1040494">The existing </a><font size="2" face="'Courier New'" color="#000000">ANTENNAAREAFACTOR</font> statement is shown as <font size="2" face="'Courier New'" color="#000000"><em>cutFactor</em></font> for the metal area. Likewise, the <font size="2" face="'Courier New'" color="#000000">ANTENNAAREADIFFREDUCEPWL</font> statement is shown as <font size="2" face="'Courier New'" color="#000000"><em>diffAreaReduceFactor</em></font>, the <font size="2" face="'Courier New'" color="#000000">ANTENNAAREAMINUSDIFF</font> statement is shown as <font size="2" face="'Courier New'" color="#000000"><em>minusDiffFactor</em></font>, and the <font size="2" face="'Courier New'" color="#000000">ANTENNAGATEPLUSDIFF</font> statement is shown as <font size="2" face="'Courier New'" color="#000000"><em>plusDiffFactor</em></font>. For cut layer, the ratio equation illustrates the effect of an <font size="2" face="'Courier New'" color="#000000">ANTENNAAREAFACTOR</font> <font size="2" face="'Courier New'" color="#000000"><em>cutFactor</em></font> statement as <font size="2" face="'Courier New'" color="#000000"><em>metalFactor</em></font>. If there is no preceding <font size="2" face="'Courier New'" color="#000000">ANTENNAAREAFACTOR</font> statement, the <font size="2" face="'Courier New'" color="#000000"><em>metalFactor</em></font> value defaults to <font size="2" face="'Courier New'" color="#000000">1.0</font>. </p>
       <p><a name="1040457">In the figures and text that follow,</a></p>
       <div>
@@ -937,9 +940,9 @@
         <strong><font color="#000000"><strong>Figure C&#45;17&nbsp; </strong></font></strong>
         <strong><a name="1037577">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1036223"><img src="images/PAE.10.1.27.png" alt=""><br></a></p>
+      <p align="left"><a name="1036223"><img src="images/PAE.10.1.27.png" width="675" height="170" alt=""><br></a></p>
       <p><a name="1036224">In the figure above,</a></p>
-      <p align="left"><a name="1036237"><img src="images/PAE.10.1.28.png" alt=""><br></a></p>
+      <p align="left"><a name="1036237"><img src="images/PAE.10.1.28.png" width="675" height="51" alt=""><br></a></p>
       <p><a name="1036238">As in calculations on the metal layers,</a></p>
       <p><a name="1036239"><font size="2" face="'Courier New'" color="#000000">PAR(N</font></a><font face="'Courier New'" color="#000000"><sub>C12,1,</sub></font><font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub>1</sub></font><font size="2" face="'Courier New'" color="#000000">) = PAR(N</font><font face="'Courier New'" color="#000000"><sub>C12,1</sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub>2</sub></font><font size="2" face="'Courier New'" color="#000000">)</font></p>
       <h4><a name="1036240">Calculating a CAR on a Cut Layer</a></h4>
@@ -953,17 +956,17 @@
         <strong><font color="#000000"><strong>Figure C&#45;18&nbsp; </strong></font></strong>
         <strong><a name="1037582">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1036342"><img src="images/PAE.10.1.29.png" alt=""><br></a></p>
+      <p align="left"><a name="1036342"><img src="images/PAE.10.1.29.png" width="675" height="229" alt=""><br></a></p>
       <p><a name="1036343">The router calculates the CAR with respect to gate </a><font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub>3</sub></font> after the cut <font size="2" face="'Courier New'" color="#000000">C23</font> process step as follows:</p>
-      <p align="left"><a name="1036366"><img src="images/PAE.10.1.30.png" alt=""><br></a></p>
+      <p align="left"><a name="1036366"><img src="images/PAE.10.1.30.png" width="675" height="59" alt=""><br></a></p>
       <p><a href="#1037587" title="C" name="1036367"><font color="Blue"><u>Figure&nbsp;C&#45;19</u></font></a><a href="#1037587" title="C"></a> shows the chip after the <font size="2" face="'Courier New'" color="#000000">C34</font> process step. </p>
       <p>
         <strong><font color="#000000"><strong>Figure C&#45;19&nbsp; </strong></font></strong>
         <strong><a name="1037587">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1036483"><img src="images/PAE.10.1.31.png" alt=""><br></a></p>
+      <p align="left"><a name="1036483"><img src="images/PAE.10.1.31.png" width="675" height="297" alt=""><br></a></p>
       <p><a name="1036484">The router calculates the CAR with respect to gate </a><font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub>3</sub></font> after the cut <font size="2" face="'Courier New'" color="#000000">C34</font> process step as follows:</p>
-      <p align="left"><a name="1036520"><img src="images/PAE.10.1.32.png" alt=""><br></a></p>
+      <p align="left"><a name="1036520"><img src="images/PAE.10.1.32.png" width="675" height="95" alt=""><br></a></p>
       <h2><a name="1036523">Checking for Antenna Violations</a></h2>
       <p><a name="1036524">For each metal layer, the router performs several antenna checks, using the keywords and values specified in the LEF or DEF file. The router can perform the following four types of antenna checks, depending on the keywords you set in the LEF file:</a></p>
       <div>
@@ -1025,7 +1028,7 @@
       <h3><a name="1036542">Area Ratio Check</a></h3>
       <p><a name="1036543">The area ratio check compares the PAR for each layer to the value of the </a><font size="2" face="'Courier New'" color="#000000">ANTENNAAREARATIO</font> or <font size="2" face="'Courier New'" color="#000000">ANTENNADIFFAREARATIO</font>.</p>
       <p><a name="1036544">The router calculates the PAR as follows:</a></p>
-      <p align="left"><a name="1037752"><img src="images/PAE.10.1.33.png" alt=""><br></a></p>
+      <p align="left"><a name="1037752"><img src="images/PAE.10.1.33.png" width="675" height="54" alt=""><br></a></p>
       <p><a name="1037754">According to the formula above, the area ratio check finds the PAR for node </a><font size="2" face="'Courier New'" color="#000000">N</font><font face="'Courier New'" color="#000000"><sub><em>i,j</em></sub></font> with respect to gate <font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub><em>k</em></sub></font> by dividing the drawn area of the node by the area of the gates that are electrically connected to it. The final PAR is multiplied by the <font size="2" face="'Courier New'" color="#000000">ANTENNAAREAFACTOR</font> (the default value for the factor is <font size="2" face="'Courier New'" color="#000000">1</font>) and compared to the <font size="2" face="'Courier New'" color="#000000">ANTENNAAREARATIO</font> or <font size="2" face="'Courier New'" color="#000000">ANTENNADIFFAREARATIO</font>. If the PAR is greater than the <font size="2" face="'Courier New'" color="#000000">ANTENNAAREARATIO</font> or <font size="2" face="'Courier New'" color="#000000">ANTENNADIFFAREARATIO</font> specified in the LEF file, the router finds a process antenna violation and attempts to fix it.</p>
       <p><a name="1036560">The link between </a><font size="2" face="'Courier New'" color="#000000">PAR(N</font><font face="'Courier New'" color="#000000"><sub><em>i,j</em></sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub><em>k</em></sub></font><font size="2" face="'Courier New'" color="#000000">)</font> and a PAE violation at node <font size="2" face="'Courier New'" color="#000000">N</font><font face="'Courier New'" color="#000000"><sub><em>i,j</em></sub></font> depends on whether node <font size="2" face="'Courier New'" color="#000000">N</font><font face="'Courier New'" color="#000000"><sub><em>i,j</em></sub></font> is connected to a piece of diffusion, as follows:</p>
       <div>
@@ -1073,7 +1076,7 @@
       <h3><a name="1036566">Side Area Ratio Check</a></h3>
       <p><a name="1036567">The side area ratio check compares the PAR computed based on the side area of the nodes for each layer to the value of the </a><font size="2" face="'Courier New'" color="#000000">ANTENNASIDEAREARATIO</font> or <font size="2" face="'Courier New'" color="#000000">ANTENNADIFFSIDEAREARATIO</font>.</p>
       <p><a name="1036568">The router calculates the PAR as follows:</a></p>
-      <p align="left"><a name="1036581"><img src="images/PAE.10.1.34.png" alt=""><br></a></p>
+      <p align="left"><a name="1036581"><img src="images/PAE.10.1.34.png" width="675" height="69" alt=""><br></a></p>
       <p><a name="1036583">According to the formula above, the area ratio check finds the PAR for node </a><font size="2" face="'Courier New'" color="#000000">N</font><font face="'Courier New'" color="#000000"><sub><em>i,j</em></sub></font> with respect to gate <font size="2" face="'Courier New'" color="#000000">G</font><font face="'Courier New'" color="#000000"><sub><em>k</em></sub></font> by dividing the side area of the node by the area of the gates that are electrically connected to <font size="2" face="'Courier New'" color="#000000">N</font><font face="'Courier New'" color="#000000"><sub><em>i,j</em></sub></font>. The final PAR is multiplied by the <font size="2" face="'Courier New'" color="#000000">ANTENNASIDEAREAFACTOR</font> (the default value for the factor is <font size="2" face="'Courier New'" color="#000000">1</font>) and compared to the <font size="2" face="'Courier New'" color="#000000">ANTENNASIDEAREARATIO</font> or <font size="2" face="'Courier New'" color="#000000">ANTENNADIFFSIDEAREARATIO</font>. If the PAR is greater than the <font size="2" face="'Courier New'" color="#000000">ANTENNASIDEAREARATIO</font> or <font size="2" face="'Courier New'" color="#000000">ANTENNADIFFSIDEAREARATIO</font> specified in the LEF file, the router finds a process antenna violation and attempts to fix it.</p>
       <p><a name="1036584">The link between </a><font size="2" face="'Courier New'" color="#000000">PAR(N</font><font face="'Courier New'" color="#000000"><sub><em>i,j</em></sub></font><font size="2" face="'Courier New'" color="#000000">,G</font><font face="'Courier New'" color="#000000"><sub><em>k</em></sub></font><font size="2" face="'Courier New'" color="#000000">)</font> and a PAE violation at node <font size="2" face="'Courier New'" color="#000000">N</font><font face="'Courier New'" color="#000000"><sub><em>i,j</em></sub></font> depends on whether node <font size="2" face="'Courier New'" color="#000000">N</font><font face="'Courier New'" color="#000000"><sub><em>i,j</em></sub></font> is connected to a piece of diffusion, as follows:</p>
       <div>
@@ -1322,11 +1325,10 @@
       <p><a name="1040091">The following process antenna rule examples use the topology shown in </a><a href="#1040170" title="C"><font color="Blue"><u>Figure&nbsp;C&#45;20</u></font></a><a href="#1040170" title="C"></a>. In this figure, there are two polysilicon gates (G1, G2), one diffusion connection (D1), contacts (C), and via (<font color="#000000"><em>V1</em></font>, <font color="#000000"><em>V2</em></font>) and metal (<font color="#000000"><em>M1</em></font>, <font color="#000000"><em>M2</em></font>, <font color="#000000"><em>M3</em></font>) shapes. Note that <font color="#000000"><em>M1,2</em></font> is one LEF <font size="2" face="'Courier New'" color="#000000">PIN</font>, and <font color="#000000"><em>M1,3</em></font> is a different LEF <font size="2" face="'Courier New'" color="#000000">PIN</font>. The other metal is routing. </p>
       <p>
         <strong><font color="#000000"><strong>Figure C&#45;20&nbsp; </strong></font></strong>
-        <strong><a name="1040170"><img src="images/PAE.10.1.35.png" alt=""><br></a></strong>
+        <strong><a name="1040170"><img src="images/PAE.10.1.35.png" width="675" height="215" alt=""><br></a></strong>
       </p>
       <p><a name="1040196">The following area values are also used for the examples:</a></p>
       <table summary="" border="0" cellpadding="4" cellspacing="0" bordercolor="#D3D3D3" width="528">
-        <caption>
         <tr>
           <td cellpadding="4" valign="top" width="167">
             <p><a name="1040173">G1 = 1.0</a></p>
@@ -1474,7 +1476,7 @@
         <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
         <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1040223">ANTENNAMAXAREACAR 1.0 LAYER M1 ;</a></font>
       </blockquote>
-      <blockquote><a name="1040224">Because the </a><font color="#000000"><em>M1</em></font> <font size="2" face="'Courier New'" color="#000000">PIN</font> area is not included in the <font size="2" face="'Courier New'" color="#000000">MAXAREACAR</font> value, both of sets of statements give the same results. For more details, see <a href="#CalculateHierDesign" title="C"><font color="#0000ff"><u>"Calculations for Hierarchical Designs."</u></font></a> </blockquote>
+      <blockquote><a name="1040224">Because the </a><font color="#000000"><em>M1</em></font> <font size="2" face="'Courier New'" color="#000000">PIN</font> area is not included in the <font size="2" face="'Courier New'" color="#000000">MAXAREACAR</font> value, both of sets of statements give the same results. For more details, see <a href="#1036921" title="C"><font color="#0000ff"><u>"Calculations for Hierarchical Designs."</u></font></a> </blockquote>
       <blockquote><a name="1040226">Similarly, the LEF </a><font size="2" face="'Courier New'" color="#000000">PIN B</font> should have values, such as either:</blockquote>
       <blockquote>
         <font size="2" face="&quot;Courier New&quot;" color="#000000"></font>
@@ -2439,12 +2441,12 @@
       <h2><a name="1036735">Using DiffUseOnly</a></h2>
       <p><a name="1036736">LEF defines only one value for </a><font size="2" face="'Courier New'" color="#000000">ANTENNAAREAFACTOR</font> and one value for <font size="2" face="'Courier New'" color="#000000">ANTENNASIDEAREAFACTOR</font>, with or without <font size="2" face="'Courier New'" color="#000000">DIFFUSEONLY</font>, per layer. If you specify more than one antenna area or side area factor for a layer, only the last one is used. The <font size="2" face="'Courier New'" color="#000000">AREAFACTOR</font> value lets you scale the value of the metal area. If you use the <font size="2" face="'Courier New'" color="#000000">DIFFUSEONLY</font> keyword, only metal attached to diffusion is scaled. </p>
       <p><a name="1038964">Suppose you have the following LEF file:</a></p>
-      <p align="left"><a name="1038950"><img src="images/PAE.10.1.36.png" alt=""><br></a></p>
+      <p align="left"><a name="1038950"><img src="images/PAE.10.1.36.png" width="676" height="282" alt=""><br></a></p>
       <p>
         <strong><font color="#000000"><strong>Figure C&#45;21&nbsp; </strong></font></strong>
         <strong><a name="1037592">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1036766"><img src="images/PAE.10.1.37.png" alt=""><br></a></p>
+      <p align="left"><a name="1036766"><img src="images/PAE.10.1.37.png" width="675" height="149" alt=""><br></a></p>
       <p><a name="1036767">In the figure,</a></p>
       <div>
         <table border="0" cellspacing="0" cellpadding="3" summary="">
@@ -2493,7 +2495,6 @@
       <h3><a name="1036923">LEF and DEF Keywords for Hierarchical Designs</a></h3>
       <p align="left"><a name="1036948">&nbsp;</a></p>
       <table summary="" border="0" cellpadding="4" cellspacing="0" bordercolor="#D3D3D3" width="648">
-        <caption>
         <tr>
           <td cellpadding="4" border="0" bordercolor="#D3D3D3" valign="middle" width="127">
             <p>
@@ -2653,7 +2654,7 @@
         <strong><font color="#000000"><strong>Figure C&#45;22&nbsp; </strong></font></strong>
         <strong><a name="1038228">&nbsp;</a></strong>
       </p>
-      <p align="left"><a name="1037099"><img src="images/PAE.10.1.38.png" alt=""><br></a></p>
+      <p align="left"><a name="1037099"><img src="images/PAE.10.1.38.png" width="675" height="274" alt=""><br></a></p>
       <h4>
         <em></em>
         <em><a name="1037100">Relevant Metal Areas</a></em>
@@ -2798,7 +2799,7 @@
         </table>
       </div>
       <p><a name="1039224">For the example in </a><a href="#1038228" title="C"><font color="Blue"><u>Figure&nbsp;C&#45;22</u></font></a><a href="#1038228" title="C"> </a>, the keywords and calculations for <font color="#000000"><em>metal3</em></font> and <font color="#000000"><em>via34</em></font> would be:</p>
-      <p align="left"><a name="1039447"><img src="images/PAE.10.1.39.png" alt=""><br></a></p>
+      <p align="left"><a name="1039447"><img src="images/PAE.10.1.39.png" width="675" height="200" alt=""><br></a></p>
       <h4>
         <em></em>
         <em><a name="1037132">Sample LEF File for a Bottom&#45;Up Hierarchical Design</a></em>
@@ -2915,13 +2916,13 @@
 <blockquote>        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1039370">&nbsp;# No ANTENNAPINDIFFAREA for this example</a></font></blockquote>
       </blockquote>
       <p>
-<blockquote><blockquote>        <font color="#000000"><a name="1039374"><img src="images/PAE.10.1.40.png" alt=""><br></a></font></blockquote></blockquote>
+<blockquote><blockquote>        <font color="#000000"><a name="1039374"><img src="images/PAE.10.1.40.png" width="638" height="109" alt=""><br></a></font></blockquote></blockquote>
       </p>
       <blockquote>
 <blockquote>        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1039408">+ ANTENNAPINPARTIALCUTAREA (N</a><font face="'Courier New'" color="#000000"><sub>34,1</sub></font>) LAYER via34 ;</font></blockquote>
       </blockquote>
       <p>
-<blockquote><blockquote>        <font color="#000000"><a name="1039398"><img src="images/PAE.10.1.41.png" alt=""><br></a></font></blockquote></blockquote>
+<blockquote><blockquote>        <font color="#000000"><a name="1039398"><img src="images/PAE.10.1.41.png" width="638" height="60" alt=""><br></a></font></blockquote></blockquote>
       </p>
       <blockquote>
 <blockquote>        <font size="2" face="&quot;Courier New&quot;" color="#000000"><a name="1039385">+ ANTENNAPINGATEAREA (G</a><font face="'Courier New'" color="#000000"><sub>1</sub></font>) LAYER Metal4 ;</font></blockquote>
@@ -2945,19 +2946,19 @@
     <hr>
     <hr align="left">
     <div style="text-align: left;">
-      <!-- Begin Buttons -->
-      <table width="650" cellpadding="0" cellspacing="0" border="0">
+      <!-- Begin Buttons -->      <table width="650" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td height="20" width="59">
 <a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+
                     </td>
 <td height="20" width="73">
 <a href="lefdefrefTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
 </td>
-
 <td height="20" width="46">
-<a href="lefdefrefIX.html"><img src="../support/nav2_index.gif" border="0"></a>
+<img src="../support/nav2_index_b.gif" border="0">
 </td>
+
           <td>
             <a href="OptimizingLEFTechnology.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
           </td>
@@ -2967,19 +2968,24 @@
           <td>
             <a>
 <a href="lefdefref.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+
             </a>
           </td>
           <td height="20" width="61">
 <img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+
           </td>
           <td height="20" width="76">
 <a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+
           </td>
           <td height="20" width="43">
 <a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+
           </td>
           <td height="20" width="37">
 <a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+
           </td>
         </tr>
       </table>
@@ -2991,7 +2997,7 @@ For support, see <a href="http://support.cadence.com" target="_blank">Cadence On
     <br>
     <br>
     <font size="-1" >
-<font size="-1"><i>Copyright &#169; 2016, <a href ="http://www.cadence.com">Cadence Design Systems, Inc.</a></i></font>
+      <i>Copyright &#169; 2018, <a href="http://www.cadence.com">Cadence Design Systems, Inc.</a></i>
     </font>
     <br>
     <font size="-1" >

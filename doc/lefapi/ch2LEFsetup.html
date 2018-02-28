@@ -5,8 +5,8 @@
     <title>LEF 5.8 C/C++ Programming Interface -- 2</title>
 <META NAME="Approver" CONTENT="Technical Publications">
 <META NAME="Author" CONTENT="Technical Publications">
-<META NAME="CreateDate" CONTENT="2017-04-12">
-<META NAME="CreateTime" CONTENT="1491994561">
+<META NAME="CreateDate" CONTENT="2017-07-10">
+<META NAME="CreateTime" CONTENT="1499670269">
 <META NAME="DataType" CONTENT="Manuals">
 <META NAME="Description" CONTENT="Describes the C/C++ programming interface used to read and write Library Exchange Format (LEF) files.">
 <META NAME="DocTitle" CONTENT="LEF 5.8 C/C++ Programming Interface">
@@ -17,14 +17,14 @@
 <META NAME="FileType" CONTENT="Chapter">
 <META NAME="Keyword" CONTENT="lefapi">
 <META NAME="Language" CONTENT="English">
-<META NAME="ModifiedDate" CONTENT="2017-04-12">
-<META NAME="ModifiedTime" CONTENT="1491994561">
+<META NAME="ModifiedDate" CONTENT="2017-07-10">
+<META NAME="ModifiedTime" CONTENT="1499670269">
 <META NAME="NextFile" CONTENT="ch3LEFcallback.html">
 <META NAME="PageCount" CONTENT="8">
 <META NAME="Platform" CONTENT="ALL">
 <META NAME="PrevFile" CONTENT="ch1Intro.html">
-<META NAME="Product" CONTENT="Languages">
-<META NAME="ProductFamily" CONTENT="Cadence Shared Tools">
+<META NAME="Product" CONTENT="Innovus, Languages">
+<META NAME="ProductFamily" CONTENT="Digital Implementation, Cadence Shared Tools">
 <META NAME="ProductVersion" CONTENT="5.8">
 <META NAME="Syntax" CONTENT="    // Initialize the reader.  This routine is called first.    lefrInit();,    // Invoke the parser    res = lefrRead(f, &quot;lefInputFileName&quot;, (void*)userData);    if (res != 0) {        printf(&quot;LEF parser returns an error\n&quot;);        return(2);    },    // Open the lef file for the reader to read    if ((f = fopen(&quot;lefInputFileName&quot;,&quot;r&quot;)) == 0) {        printf(&quot;CouldnÕt open input file Õ%sÕ\n&quot;,&quot;lefInputFileName&quot;);        return(2);    },    // Set user datalefrSetUserData ((void*)3);,    fclose(f);,    return 0;},int lefrClear(),int lefrInit(),int lefrInitSession(int startSession = 1),int lefrRead(FILE* file,const char* fileName,lefiUserData* data),int lefrReset(void),int setupRoutine() {    FILE* f;    int   res;    int   userData = 0x01020304;    ...,lefiUserData lefrGetUserData(),lefrRegisterLef58Type(ÔXXXÕ, ÔCUTÕ);,lefrRegisterLef58Type(ÔXXXÕ, ÔROUTINGÕ);,void lefrPrintUnusedCallbacks(FILE* f),void lefrRegisterLef58Type(const char* lef58Type, const char* layerType);,void lefrSetCommentChar(char c) ,void lefrSetRegisterUnusedCallbacks(void),void lefrSetShiftCase(void) ,void lefrSetUserData(lefiUserData* data),void lefrSetVersionValue( char* version)">
 <META NAME="RightsManagement" CONTENT="Copyright 2017 Cadence Design Systems Inc.">
