@@ -5,20 +5,19 @@
     <title>LEF/DEF 5.8 Language Reference -- B</title>
 <META NAME="Approver" CONTENT="Technical Publications">
 <META NAME="Author" CONTENT="Technical Publications">
-<META NAME="CreateDate" CONTENT="2017-04-26">
-<META NAME="CreateTime" CONTENT="1493186672">
+<META NAME="CreateDate" CONTENT="2018-02-06">
+<META NAME="CreateTime" CONTENT="1517908046">
 <META NAME="DataType" CONTENT="Manuals">
 <META NAME="Description" CONTENT="Describes the syntax for Library Exchange Format (LEF) and Design Exchange Format (DEF) files.">
 <META NAME="DocTitle" CONTENT="LEF/DEF 5.8 Language Reference">
 <META NAME="DocType" CONTENT="Reference">
-<META NAME="EdmsRelease" CONTENT="FM-Wiki-1.0_P005">
+<META NAME="EdmsRelease" CONTENT="FM-Wiki-2.0_HF1">
 <META NAME="FileTitle" CONTENT="B">
-<META NAME="Keywords" CONTENT="">
 <META NAME="FileType" CONTENT="Chapter">
 <META NAME="Keyword" CONTENT="lefdefref">
 <META NAME="Language" CONTENT="English">
-<META NAME="ModifiedDate" CONTENT="2017-04-26">
-<META NAME="ModifiedTime" CONTENT="1493186672">
+<META NAME="ModifiedDate" CONTENT="2018-02-06">
+<META NAME="ModifiedTime" CONTENT="1517908046">
 <META NAME="NextFile" CONTENT="PAE.html">
 <META NAME="PageCount" CONTENT="18">
 <META NAME="Platform" CONTENT="ALL">
@@ -26,8 +25,7 @@
 <META NAME="Product" CONTENT="Innovus, Languages">
 <META NAME="ProductFamily" CONTENT="Digital Implementation, Cadence Shared Tools">
 <META NAME="ProductVersion" CONTENT="5.8">
-<META NAME="Syntax" CONTENT="BUSBITCHARS &quot;[]&quot; ;,END SPACING,END UNITS,END cut1,END cut2,END cut3,END cut4,END cut5,END layerName ,END metal1,END metal2,END metal3,END metal4,END metal5,END metal6,END via12_H,END via12_V,END via23,END via23_stack_north,END via23_stack_south,END via34,END via34_stack_east,END via34_stack_west,END via45,END via45_stack_north,END via45_stack_south,END via56_H,END via56_V,END via56_stack_east,END via56_stack_west,END viaName,LAYER cut1TYPE CUT ;,LAYER cut2TYPE CUT ;,LAYER cut3TYPE CUT ;,LAYER cut4TYPE CUT ;,LAYER cut5TYPE CUT ;,LAYER layerNameTYPE ROUTING ;PITCH distance ;WIDTH defWidth ;SPACING minSpacing [RANGE minwidth maxwidth] ;WIREEXTENSION value ;,LAYER metal1TYPE ROUTING ;WIDTH 0.23 ;SPACING 0.23 ; PITCH 0.56 ;DIRECTION HORIZONTAL ;,LAYER metal1TYPE ROUTING ;WIDTH 0.23 ;SPACING 0.23 ; SPACING 0.6 RANGE 10.02 1000 ;PITCH 0.56 ;DIRECTION HORIZONTAL ;,LAYER metal1TYPE ROUTING ;WIDTH 0.23 ;SPACING 0.23 ;PITCH 0.56 ;DIRECTION HORIZONTAL ;,LAYER metal1WIDTH 0.23 ;SPACING 0.23 ; SPACING 0.6 RANGE 10.002 1000 ; ,LAYER metal2TYPE ROUTING ;WIDTH 0.28 ;SPACING 0.28 ;PITCH 0.56 ;WIREEXTENSION 0.19 ;   DIRECTION VERTICAL ;,LAYER metal2TYPE ROUTING ;WIDTH 0.28 ;SPACING 0.28 ;SPACING 0.6 RANGE 10.02 1000 ;PITCH 0.56 ;WIREEXTENSION 0.19 ;DIRECTION VERTICAL ;,LAYER metal3TYPE ROUTING ;WIDTH 0.28 ;SPACING 0.28 ;PITCH 0.56 ;DIRECTION HORIZONTAL ;,LAYER metal3TYPE ROUTING ;WIDTH 0.28 ;SPACING 0.28 ;SPACING 0.6 RANGE 10.02 1000 ;PITCH 0.56 ;WIREEXTENSION 0.19 ;DIRECTION HORIZONTAL ;,LAYER metal4TYPE ROUTING ;WIDTH 0.28 ;SPACING 0.28 ;SPACING 0.6 RANGE 10.02 1000 ;PITCH 0.56 ;WIREEXTENSION 0.19 ;DIRECTION VERTICAL ;,LAYER metal5TYPE ROUTING ;WIDTH 0.28 ;SPACING 0.28 ;SPACING 0.6 RANGE 10.02 1000 ;PITCH 0.56 ;WIREEXTENSION 0.19 ;DIRECTION HORIZONTAL ;,LAYER metal6TYPE ROUTING ;WIDTH 0.44 ;SPACING 0.46 ;SPACING 0.6 RANGE 10.02 1000 ;PITCH 1.12 ;DIRECTION VERTICAL ;,SPACING SAMENET   layerName layerName minSpace [STACK] ;,UNITSDATABASE MICRONS 100  ;,VERSION 5.8 ;,VIA via12_H DEFAULTLAYER metal1 ;RECT -0.19 -0.14 0.19 0.14 ;        # metal1 end-of-lineextension 0.6 in both directionsLAYER cut1 ;RECT -0.13 -0.13 0.13 0.13 ;LAYER metal2 ;RECT -0.14 -0.14 0.14 0.14 ;,VIA via12_H DEFAULTLAYER metal1 ;RECT -0.19 -0.14 0.19 0.14 ;     # metal1 end-of-line ext 0.6LAYER cut1 ;RECT -0.13 -0.13 0.13 0.13 ;LAYER metal2 ;RECT -0.14 -0.14 0.14 0.14 ;,VIA via12_V DEFAULTLAYER metal1 ;RECT -0.14 -0.19 0.14 0.19 ;        # metal1 end-of-lineextension 0.6 in both directionsLAYER cut1 ;RECT -0.13 -0.13 0.13 0.13 ;LAYER metal2 ;RECT -0.14 -0.14 0.14 0.14 ;,VIA via12_V DEFAULTLAYER metal1 ;RECT -0.14 -0.19 0.14 0.19 ;     # metal1 end-of-line ext 0.6LAYER cut1 ;RECT -0.13 -0.13 0.13 0.13 ;LAYER metal2 ;RECT -0.14 -0.14 0.14 0.14 ;,VIA via23 DEFAULTLAYER metal2 ;RECT -0.14 -0.14 0.14 0.14 ;        # Use square viaLAYER cut2 ;RECT -0.13 -0.13 0.13 0.13 ;LAYER metal3 ;RECT -0.14 -0.14 0.14 0.14 ;        # Use square via,VIA via23 DEFAULTLAYER metal2 ;RECT -0.14 -0.14 0.14 0.14 ;LAYER cut2 ;RECT -0.13 -0.13 0.13 0.13 ;LAYER metal3 ;RECT -0.14 -0.14 0.14 0.14 ;,VIA via23_stack_north DEFAULTLAYER metal2 ;RECT -0.14 -0.14 0.14 0.6 ;   # MAR = 0.28 x 0.74LAYER cut2 ;RECT -0.13 -0.13 0.13 0.13 ;LAYER metal3 ;RECT -0.14 -0.14 0.14 0.14 ;,VIA via23_stack_south DEFAULTLAYER metal2 ;RECT -0.14 -0.6 0.14 0.14 ;   # MAR = 0.28 x 0.74LAYER cut2 ;RECT -0.13 -0.13 0.13 0.13 ;LAYER metal3 ;RECT -0.14 -0.14 0.14 0.14 ;,VIA via34 DEFAULTLAYER metal3 ;RECT -0.14 -0.14 0.14 0.14 ;LAYER cut3 ;RECT -0.13 -0.13 0.13 0.13 ;LAYER metal4 ;RECT -0.14 -0.14 0.14 0.14 ;,VIA via34_stack_east DEFAULTLAYER metal3 ;RECT -0.14 -0.14 0.6 0.14 ;   # MAR = 0.28 x 0.74LAYER cut3 ;RECT -0.13 -0.13 0.13 0.13 ;LAYER metal4 ;RECT -0.14 -0.14 0.14 0.14 ;,VIA via34_stack_west DEFAULTLAYER metal3 ;RECT -0.6 -0.14 0.14 0.14 ;   # MAR = 0.28 x 0.74LAYER cut3 ;RECT -0.13 -0.13 0.13 0.13 ;LAYER metal4 ;RECT -0.14 -0.14 0.14 0.14 ;,VIA via45 DEFAULTLAYER metal4 ;RECT -0.14 -0.14 0.14 0.14 ;LAYER cut4 ;RECT -0.13 -0.13 0.13 0.13 ;LAYER metal5 ;RECT -0.14 -0.14 0.14 0.14 ;,VIA via45_stack_north DEFAULTLAYER metal4 ;RECT -0.14 -0.14 0.14 0.6 ;   # MAR = 0.28 x 0.74LAYER cut4 ;RECT -0.13 -0.13 0.13 0.13 ;LAYER metal5 ;RECT -0.14 -0.14 0.14 0.14 ;,VIA via45_stack_south DEFAULTLAYER metal4 ;RECT -0.14 -0.6 0.14 0.14 ;   # MAR = 0.28 x 0.74LAYER cut4 ;RECT -0.13 -0.13 0.13 0.13 ;LAYER metal5 ;RECT -0.14 -0.14 0.14 0.14 ;,VIA via56_H DEFAULTLAYER metal5 ;RECT -0.24 -0.19 0.24 0.19 ;LAYER cut5 ;RECT -0.18 -0.18 0.18 0.18 ;LAYER metal6 ;RECT -0.27 -0.27 0.27 0.27 ;,VIA via56_V DEFAULTLAYER metal5 ;RECT -0.19 -0.24 0.19 0.24 ;LAYER cut5 ;RECT -0.18 -0.18 0.18 0.18 ;LAYER metal6 ;RECT -0.27 -0.27 0.27 0.27 ;,VIA via56_stack_east DEFAULTLAYER metal5 ;RECT -0.19 -0.19 0.35 0.19 ;   # MAR = 0.38 x 0.54LAYER cut5 ;RECT -0.18 -0.18 0.18 0.18 ;LAYER metal6 ;RECT -0.27 -0.27 0.27 0.27 ;,VIA via56_stack_west DEFAULTLAYER metal5 ;RECT -0.35 -0.19 0.19 0.19 ;   # MAR = 0.38 x 0.54LAYER cut5 ;RECT -0.18 -0.18 0.18 0.18 ;LAYER metal6 ;RECT -0.27 -0.27 0.27 0.27 ;,VIA viaName DEFAULT[TOPSTACKONLY]LAYER layerName RECT pt pt ; ... ">
-<META NAME="RightsManagement" CONTENT="Copyright 2017 Cadence Design Systems Inc.">
+<META NAME="RightsManagement" CONTENT="Copyright 2018 Cadence Design Systems Inc.">
 <META NAME="Title" CONTENT="LEF/DEF 5.8 Language Reference -- B">
 <META NAME="TopicTags" CONTENT="FALSE">
 <META NAME="Version" CONTENT="5.8">
@@ -45,14 +43,15 @@
       <tr>
         <td height="20" width="59">
 <a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+
                 </td>
 <td height="20" width="73">
 <a href="lefdefrefTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
 </td>
-
 <td height="20" width="46">
-<a href="lefdefrefIX.html"><img src="../support/nav2_index.gif" border="0"></a>
+<img src="../support/nav2_index_b.gif" border="0">
 </td>
+
         <td>
           <a href="Examples.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
         </td>
@@ -62,19 +61,24 @@
         <td height="20">
           <a>
 <a href="lefdefref.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+
           </a>
         </td>
         <td height="20" width="61">
 <img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+
         </td>
         <td height="20" width="76">
 <a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+
         </td>
         <td height="20" width="43">
 <a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+
         </td>
         <td height="20" width="37">
 <a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+
         </td>
       </tr>
     </table>
@@ -221,11 +225,10 @@
       <h2><a name="1031996">Guidelines for Routing Pitch</a></h2>
       <p><a name="1032041">The following is a summary for choosing the right pitch for an existing design library. For detailed information on determining routing pitch, refer to the </a><font color="#000000"><em>Cadence Abstract Generator User Guide</em></font>.</p>
       <p>
-        <strong><a name="1032052">Pitch Measurement <br><img src="images/OptimizingLEFTechnology.09.1.1.png" alt=""><br> </a></strong>
+        <strong><a name="1032052">Pitch Measurement <br><img src="images/OptimizingLEFTechnology.09.1.1.png" width="670" height="218" alt=""><br> </a></strong>
       </p>
       <h4><a name="1032055">DESIGN RULE No. 1</a></h4>
       <table summary="" border="0" cellpadding="4" cellspacing="0" bordercolor="#D3D3D3" width="648">
-        <caption>
         <tr>
           <td cellpadding="4" valign="top" width="108">
             <p><a name="1032331">W.1</a></p>
@@ -291,7 +294,7 @@
           </td>
         </tr>
       </table>
-      <p align="left"><a name="1034859"><img src="images/OptimizingLEFTechnology.09.1.2.png" alt=""><br></a></p>
+      <p align="left"><a name="1034859"><img src="images/OptimizingLEFTechnology.09.1.2.png" width="669" height="314" alt=""><br></a></p>
       <p><a name="1034860">Although the minimum </a><font size="2" face="'Courier New'" color="#000000">metal1</font> routing pitch is 0.485um from the design rule, you should use 0.56um instead, to match the <font size="2" face="'Courier New'" color="#000000">metal3</font> routing pitch in the same preferred direction.</p>
       <h4><a name="1032157">LEF Construct No. 1</a></h4>
       <dl>
@@ -413,7 +416,6 @@
       <p><a name="1032234">The </a><font size="2" face="'Courier New'" color="#000000">SPACING</font> statement in the LEF <font size="2" face="'Courier New'" color="#000000">LAYER</font> section is applied to both regular and special wires. You can use the Cadence&#174; ultra router option <font size="2" face="'Courier New'" color="#000000">frouteUseRangeRule</font> to determine which objects to check against the <font size="2" face="'Courier New'" color="#000000">SPACING RANGE</font> statement. The default checks both pin and obstruction. </p>
       <h4><a name="1032247">DESIGN RULE No. 2</a></h4>
       <table summary="" border="0" cellpadding="4" cellspacing="0" bordercolor="#D3D3D3" width="648">
-        <caption>
         <tr>
           <td cellpadding="4" valign="top" width="108">
             <p><a name="1032563">S.1</a></p>
@@ -431,7 +433,7 @@
           </td>
         </tr>
       </table>
-      <p align="left"><a name="1032286"><img src="images/OptimizingLEFTechnology.09.1.3.png" alt=""><br></a></p>
+      <p align="left"><a name="1032286"><img src="images/OptimizingLEFTechnology.09.1.3.png" width="670" height="254" alt=""><br></a></p>
       <h4><a name="1032290">LEF CONSTRUCT No. 2</a></h4>
       <dl>
         <font size="2" face="'Courier New'" color="#000000"><a name="1032292">LAYER metal1<dd>WIDTH 0.23 ;<dd>SPACING 0.23 ; <dd>SPACING 0.6 RANGE 10.002 1000 ; </a></font>
@@ -443,7 +445,6 @@
       <p><a name="1034719">The following guidelines are for wire extension at vias.</a></p>
       <h4><a name="1032315">DESIGN RULE No. 3</a></h4>
       <table summary="" border="0" cellpadding="4" cellspacing="0" bordercolor="#D3D3D3" width="648">
-        <caption>
         <tr>
           <td cellpadding="4" valign="top" width="108">
             <p><a name="1032473">W.1</a></p>
@@ -477,7 +478,7 @@
           </td>
         </tr>
       </table>
-      <p align="left"><a name="1035039"><img src="images/OptimizingLEFTechnology.09.1.4.png" alt=""><br></a></p>
+      <p align="left"><a name="1035039"><img src="images/OptimizingLEFTechnology.09.1.4.png" width="675" height="281" alt=""><br></a></p>
       <h4><a name="1032646">LEF CONSTRUCT No. 3</a></h4>
       <dl>
         <font size="2" face="'Courier New'" color="#000000"><a name="1032648">LAYER metal2<dd>TYPE ROUTING ;<dd>WIDTH 0.28 ;<dd>SPACING 0.28 ;<dd>PITCH 0.56 ;<dd>WIREEXTENSION 0.19 ;   <dd>DIRECTION VERTICAL ;</a></font>
@@ -539,7 +540,6 @@
       <p><a name="1034720">The following guidelines are for default vias.</a></p>
       <h4><a name="1032743">DESIGN RULE No. 4</a></h4>
       <table summary="" border="0" cellpadding="4" cellspacing="0" bordercolor="#D3D3D3" width="636">
-        <caption>
         <tr>
           <td cellpadding="4" valign="top" width="108">
             <p><a name="1032753">W.1</a></p>
@@ -573,7 +573,7 @@
           </td>
         </tr>
       </table>
-      <p align="left"><a name="1035099"><img src="images/OptimizingLEFTechnology.09.1.5.png" alt=""><br></a></p>
+      <p align="left"><a name="1035099"><img src="images/OptimizingLEFTechnology.09.1.5.png" width="675" height="350" alt=""><br></a></p>
       <h4><a name="1032893">LEF CONSTRUCT No. 4 (Case B)</a></h4>
       <p>
         <font size="3" face="Sans-Serif" color="#000000"><a name="1032894">&nbsp;</a></font>
@@ -635,7 +635,6 @@
       <p><a name="1034721">The following guidelines are for stack vias (minimum area rule) and </a><font size="2" face="'Courier New'" color="#000000">SAMENET</font> <font size="2" face="'Courier New'" color="#000000">SPACING</font>.</p>
       <h4><a name="1033058">DESIGN RULE No. 5</a></h4>
       <table summary="" border="0" cellpadding="4" cellspacing="0" bordercolor="#D3D3D3" width="648">
-        <caption>
         <tr>
           <td cellpadding="4" valign="top" width="108">
             <p><a name="1033082">W.1</a></p>
@@ -717,7 +716,7 @@
           </td>
         </tr>
       </table>
-      <p><a name="1035254"><img src="images/OptimizingLEFTechnology.09.1.6.png" alt=""><br></a></p>
+      <p><a name="1035254"><img src="images/OptimizingLEFTechnology.09.1.6.png" width="675" height="644" alt=""><br></a></p>
       <h4><a name="1033333">LEF CONSTRUCT No. 5</a></h4>
       <p>
         <font size="3" face="Sans-Serif" color="#000000"><a name="1033334">&nbsp;</a></font>
@@ -1083,19 +1082,19 @@
     <hr>
     <hr align="left">
     <div style="text-align: left;">
-      <!-- Begin Buttons -->
-      <table width="650" cellpadding="0" cellspacing="0" border="0">
+      <!-- Begin Buttons -->      <table width="650" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td height="20" width="59">
 <a href="javascript:openLibrary()"><img src="../support/nav2_library.gif" border="0" alt="View Library" height="20" width="59"></a>
+
                     </td>
 <td height="20" width="73">
 <a href="lefdefrefTOC.html"><img src="../support/nav2_toc.gif" alt="Table of Contents" border="0"></a>
 </td>
-
 <td height="20" width="46">
-<a href="lefdefrefIX.html"><img src="../support/nav2_index.gif" border="0"></a>
+<img src="../support/nav2_index_b.gif" border="0">
 </td>
+
           <td>
             <a href="Examples.html"><img src="images/nav2_previous.gif" alt="Previous" border="0"></a>
           </td>
@@ -1105,19 +1104,24 @@
           <td>
             <a>
 <a href="lefdefref.pdf"><img src="../support/nav2_print.gif" border="0" alt="Open PDF to print book" height="20" width="114"></a>
+
             </a>
           </td>
           <td height="20" width="61">
 <img src="../support/nav2_black.gif" border="0"  height="20" width="76">
+
           </td>
           <td height="20" width="76">
 <a href="/feedback.htm"><img src="../support/nav2_feedback.gif" border="0" alt="Email Comments" height="20" width="76"></a>
+
           </td>
           <td height="20" width="43">
 <a href="../cdsuser/help.html"><img src="../support/nav2_help.gif" border="0" alt="Help Using Documentation" height="20" width="43"></a>
+
           </td>
           <td height="20" width="37">
 <a href="/exitsearch.htm"><img src="../support/nav2_exit.gif" border="0" alt="Shut Down Cadence Documentation Server" height="20" width="37"></a>
+
           </td>
         </tr>
       </table>
@@ -1129,7 +1133,7 @@ For support, see <a href="http://support.cadence.com" target="_blank">Cadence On
     <br>
     <br>
     <font size="-1" >
-<font size="-1"><i>Copyright &#169; 2016, <a href ="http://www.cadence.com">Cadence Design Systems, Inc.</a></i></font>
+      <i>Copyright &#169; 2018, <a href="http://www.cadence.com">Cadence Design Systems, Inc.</a></i>
     </font>
     <br>
     <font size="-1" >

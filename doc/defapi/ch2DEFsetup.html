@@ -5,8 +5,8 @@
     <title>DEF 5.8 C/C++ Programming Interface -- 2</title>
 <META NAME="Approver" CONTENT="Technical Publications">
 <META NAME="Author" CONTENT="Technical Publications">
-<META NAME="CreateDate" CONTENT="2017-04-18">
-<META NAME="CreateTime" CONTENT="1492498753">
+<META NAME="CreateDate" CONTENT="2017-07-10">
+<META NAME="CreateTime" CONTENT="1499674905">
 <META NAME="DataType" CONTENT="Manuals">
 <META NAME="Description" CONTENT="Describes the C/C++ programming interface used to read and write Design Exchange Format (DEF) files.">
 <META NAME="DocTitle" CONTENT="DEF 5.8 C/C++ Programming Interface">
@@ -17,14 +17,14 @@
 <META NAME="FileType" CONTENT="Chapter">
 <META NAME="Keyword" CONTENT="defapi">
 <META NAME="Language" CONTENT="English">
-<META NAME="ModifiedDate" CONTENT="2017-04-18">
-<META NAME="ModifiedTime" CONTENT="1492498753">
+<META NAME="ModifiedDate" CONTENT="2017-07-10">
+<META NAME="ModifiedTime" CONTENT="1499674905">
 <META NAME="NextFile" CONTENT="ch3DEFcallback.html">
 <META NAME="PageCount" CONTENT="8">
 <META NAME="Platform" CONTENT="ALL">
 <META NAME="PrevFile" CONTENT="ch1Intro.html">
-<META NAME="Product" CONTENT="Languages">
-<META NAME="ProductFamily" CONTENT="Cadence Shared Tools">
+<META NAME="Product" CONTENT="Innovus, Languages">
+<META NAME="ProductFamily" CONTENT="Digital Implementation, Cadence Shared Tools">
 <META NAME="ProductVersion" CONTENT="5.8">
 <META NAME="Syntax" CONTENT="// Initialize the reader. This routine has to call first. defrInit();,// Open the def file for the reader to readif ((f = fopen(&quot;defInputFileName&quot;,&quot;r&quot;)) == 0) {printf(&quot;CouldnÕt open input file Õ%sÕ\n&quot;, &quot;defInputFileName&quot;);return(2);}// Invoke the parserres = defrRead(f, &quot;defInputFileName&quot;, (void*)userData);if (res != 0) {printf(&quot;DEF parser returns an error\n&quot;);return(2);}fclose(f);return 0;},// Set user datadefrSetUserData ((void *)3);,defiUserData defrGetUserData(),int defrClear(),int defrGetAllowComponentNets(),int defrInit(),int defrInitSession (int startSession = 1),int defrRead(FILE* file,const char* fileName,defiUserData* data,int case_sensitive),int setupRoutine() {FILE* f;int   res;int   userData = 0x01020304;...,int* defrUnusedCallbackCount(void),void defrPrintUnusedCallbacks(FILE* log),void defrSetAddPathToNet(void),void defrSetAllowComponentNets(void),void defrSetCommentChar(char c),void defrSetRegisterUnusedCallbacks(void),void defrSetUserData(defiUserData* data)">
 <META NAME="RightsManagement" CONTENT="Copyright 2017 Cadence Design Systems Inc.">
